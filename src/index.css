@@ -1,6 +1,69 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "./resources/css/hamburger.css";
 
-/* :root {
-} */
+/* [x-cloak] { display: none !important; } */
+
+body:has(div.preventScroll){
+  overflow: hidden;
+  height: 100vh;
+}
+
+:root {
+  --primary-color: #FF2F00;
+  --primaryDark-color: #B30000;
+  --secondary-color: #FFAF00;
+  --backdrop-color: #F3F3F3;
+  --text-color: #504746;
+  --navbar-height: 97px;
+
+  --scarletChilly-color: #FF2F00;
+  --turkeyRed-color: #B30000;
+  --orangeWeb-color: #FFAF00;
+  --wenge-color: #504746;
+  --parchment-color: #fefbee;
+  --whiteSmoke-color: #F3F3F3;
+  --platinum-color: #E5E7E6;
+}
+
+.spacer{
+  height: var(--navbar-height)
+}
+
+html {
+  scroll-padding-top: var(--navbar-height)
+}
+
+.h-screen-adj{
+  height: calc(100vh - var(--navbar-height));
+}
+
+.container {
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
