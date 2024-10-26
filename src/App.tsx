@@ -10,42 +10,42 @@ import Footer from './components/Footer';
 
 const Layout = () => {
   return (
-      <div className="bg-[var(--backdrop-color)]" /* x-data="{navOpen: false, modalOpen: false}" */>
-          <Navbar />
-          <main>
-              <Outlet /> {/* This is where child routes will be rendered */}
-          </main>
-          <Footer />
-      </div>
+    <div /* x-data="{navOpen: false, modalOpen: false}" */>
+      <Navbar />
+      <main>
+        <Outlet /> {/* This is where child routes will be rendered */}
+      </main>
+      <Footer />
+    </div>
   );
 };
 
 const router = createBrowserRouter([
   {
-      path: '/',
-      element: <Layout />, // Using Layout for all routes
-      children: [
-          {
-              index: true, // This will render Home at the root path
-              element: <Home />,
-          },
-          {
-              path: 'menu',
-              element: <Menu />,
-          },
-          {
-              path: 'reservations',
-              element: <Reservations />,
-          },
-          {
-              path: 'order-online',
-              element: <OrderOnline />,
-          },
-          {
-              path: 'contacts',
-              element: <Contacts />,
-          },
-      ],
+    path: '/',
+    element: <Layout />, // Using Layout for all routes
+    children: [
+      {
+        index: true, // This will render Home at the root path
+        element: <Home />,
+      },
+      {
+        path: 'menu',
+        element: <Menu />,
+      },
+      {
+        path: 'reservations',
+        element: <Reservations />,
+      },
+      {
+        path: 'order-online',
+        element: <OrderOnline />,
+      },
+      {
+        path: 'contacts',
+        element: <Contacts />,
+      },
+    ],
   },
 ]);
 

@@ -1,6 +1,6 @@
 const Contacts = () => {
   return (
-    <div className="w-screen h-screen flex justify-center items-center bg-transparent">
+    <div className="w-full h-screen flex justify-center items-center bg-transparent">
       <h1>Contacts</h1>
     </div>
   )

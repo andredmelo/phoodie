@@ -2,9 +2,9 @@
 import ReactDOM from 'react-dom/client';
 import './index.css'
 import App from './App.tsx'
-import 'alpinejs';
+//import 'alpinejs';
 
-declare global {
+/* declare global {
   interface Window {
     counter: () => {
       count: number;
@@ -20,7 +20,7 @@ window.counter = function() {
       this.count += 1;
     }
   };
-};
+}; */
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(<App />);

@@ -1,9 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "./resources/css/hamburger.css";
-
-/* [x-cloak] { display: none !important; } */
 
 body:has(div.preventScroll){
   overflow: hidden;
@@ -27,15 +24,19 @@ body:has(div.preventScroll){
   --platinum-color: #E5E7E6;
 }
 
-.spacer{
-  height: var(--navbar-height)
+body {
+  background-color: var(--backdrop-color);
+}
+
+.spacer {
+  height: var(--navbar-height);
 }
 
 html {
-  scroll-padding-top: var(--navbar-height)
+  scroll-padding-top: var(--navbar-height);
 }
 
-.h-screen-adj{
+.h-screen-adj {
   height: calc(100vh - var(--navbar-height));
 }
 
