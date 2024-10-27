@@ -10,13 +10,13 @@ import Footer from './components/Footer';
 
 const Layout = () => {
   return (
-    <div /* x-data="{navOpen: false, modalOpen: false}" */>
+    <>
       <Navbar />
       <main>
         <Outlet /> {/* This is where child routes will be rendered */}
       </main>
       <Footer />
-    </div>
+    </>
   );
 };
 

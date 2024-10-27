@@ -13,6 +13,7 @@ body:has(div.preventScroll){
   --secondary-color: #FFAF00;
   --backdrop-color: #F3F3F3;
   --text-color: #504746;
+  --secondaryText-color: #867675;
   --navbar-height: 97px;
 
   --scarletChilly-color: #FF2F00;

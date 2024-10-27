@@ -2,29 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { cn } from "../resources/lib/utils";
 import '../resources/css/hamburger.css';
-
-const sectionsList = [
-  {
-    title: "Home",
-    link: "/"
-  },
-  {
-    title: "Menu",
-    link: "/menu"
-  },
-  {
-    title: "Reservations",
-    link: "/reservations"
-  },
-  {
-    title: "Order Online",
-    link: "/order-online"
-  },
-  {
-    title: "Contacts",
-    link: "/contacts"
-  },
-];
+import sectionsList from './SectionsList';
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
