@@ -1,12 +1,11 @@
-import './App.css'
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Menu from './components/Menu';
-import Reservations from './components/Reservations';
-import OrderOnline from './components/OrderOnline';
-import Contacts from './components/Contacts';
-import Footer from './components/Footer';
+import Navbar from './layouts/Navbar';
+import Home from './pages/Home/Home';
+import Menu from './pages/Menu/Menu';
+import Reservations from './pages/Reservations';
+import OrderOnline from './pages/OrderOnline';
+import Contacts from './pages/Contacts';
+import Footer from './layouts/Footer';
 
 const Layout = () => {
   return (

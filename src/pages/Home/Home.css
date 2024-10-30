@@ -1,0 +1,138 @@
+
+.heroSection{
+  display: flex;
+  width: 100%;
+  min-height: 380px;
+  max-height: 700px;
+  justify-content:center;
+  align-items: center;
+  column-gap: 2rem;
+  background-color: var( --color-turkeyRed-90);
+}
+
+.specialsTitle{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  gap:40px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.specialsSection{
+  display: flex;
+  width: 100%;
+  justify-content:center;
+  flex-wrap: wrap;
+  gap:5rem;
+  height: auto;
+  padding-bottom:4rem;
+}
+
+.testimonialTitle{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-family: 'Sora', sans-serif;
+  font-size: 26px;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: var( --color-orangeWeb);
+  color: var( --color-white);
+  padding-top:4rem;
+}
+
+.testimonialSection{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:2rem;
+  align-items: center;
+  min-height: 400px;
+  background-color: var( --color-orangeWeb);
+  padding-bottom:4rem;
+  padding-top:4rem;
+}
+
+.reservationsSection{
+/*   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var( --color-green);
+  max-width:100%;
+  min-width: 400px; */
+  padding-top:2rem;
+  padding-bottom:2rem;
+  text-align: center;
+  color: var( --color-green)
+}
+
+.confirmationSection{
+  /*   display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var( --color-green);
+    max-width:100%;
+    min-width: 400px; */
+    padding-top:2rem;
+    padding-bottom:2rem;
+    text-align: center;
+    color: var( --color-green)
+  }
+  
+.orderOnlineSection{
+  background-color: var( --color-green);
+  justify-content: center;
+  align-items: center;
+  max-width:100%;
+  min-width: 400px;
+  padding-top:2rem;
+  padding-bottom:2rem;
+  text-align: center;
+  color: var( --color-white);
+}
+
+.aboutSection{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width:100%;
+  min-width: 400px;
+  padding-top:2rem;
+  padding-bottom:2rem;
+}
+
+
+
+
+
+
+
+
+
+
+.dslc-section-divider {
+  position: relative;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: -1px;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.dslc-section-divider[data-divider-pos="top"] {
+  top: 1px;
+}
+
+.dslc-section-divider.dslc-flip-hor svg {
+  transform: scaleX(-1);
+}
+.dslc-section-divider.dslc-flip-ver svg {
+  transform: scaleY(-1);
+}

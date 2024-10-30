@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Sora';
+  src: url('fonts/Sora-variable-wght.ttf');
+  font-weight: 100 900;
+}
+
 body:has(div.preventScroll){
   overflow: hidden;
   height: 100vh;
@@ -9,20 +15,23 @@ body:has(div.preventScroll){
 
 :root {
   --primary-color: #FF2F00;
-  --primaryDark-color: #B30000;
+  --primaryDark-color: #B30000; 
   --secondary-color: #FFAF00;
   --backdrop-color: #F3F3F3;
   --text-color: #504746;
   --secondaryText-color: #867675;
-  --navbar-height: 97px;
+  --navbar-height: 80px;
 
-  --scarletChilly-color: #FF2F00;
-  --turkeyRed-color: #B30000;
-  --orangeWeb-color: #FFAF00;
-  --wenge-color: #504746;
-  --parchment-color: #fefbee;
-  --whiteSmoke-color: #F3F3F3;
-  --platinum-color: #E5E7E6;
+  --color-white: #ffffff;
+  --color-scarletChilly: #FF2F00;
+  --color-turkeyRed: #B30000;
+  --color-turkeyRed-90: rgba(179, 0, 0, 0.99);
+  --color-orangeWeb: #FFAF00;
+  --color-orangeWeb-90: rgba(255, 175, 0, 0.99);
+  --color-wenge: #504746;
+  --color-parchment: #fefbee;
+  --color-whiteSmoke: #F3F3F3;
+  --color-platinum: #E5E7E6;
 }
 
 body {
@@ -68,4 +77,9 @@ html {
   .container {
     max-width: 1536px;
   }
+}
+
+.navbar-shadow {
+  /* box-shadow: 0 20px 30px 0px rgb(245 245 245 / 0.95), 0 0px 30px 0px rgb(245 245 245 / 0.95); */
+  box-shadow: 0 20px 30px 0px rgb(0 0 0 / 0.1), 0 0px 30px 0px rgb(0 0 0 / 0.05);
 }
