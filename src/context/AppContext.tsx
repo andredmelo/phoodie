@@ -1,24 +1,11 @@
 import { createContext, useReducer, ReactNode } from "react";
 import initialState from "./initialState"; // Ensure this is a default export
+import { AppState, AppAction, MenuItem, CartItem } from "../types/menu";
 
-interface CartItem {
-  id: string;
-  quantity: number;
-}
-
-interface State {
-  cart: CartItem[];
-  menuData: any;
-}
-
-interface Action {
-  type: string;
-  payload: any;
-}
-
-const AppReducer = (state: State, action: Action): State => {
+const AppReducer = (state: AppState, action: AppAction): AppState => {
   switch (action.type) {
     case 'ADD_TO_CART':
+      //console.log("Reducer received action:", action); // Log the action
       const inCart = state.cart.find(item => item.id === action.payload.id);
       if (inCart) {
         return {
@@ -34,6 +21,7 @@ const AppReducer = (state: State, action: Action): State => {
         };
       }
     case 'REMOVE_FROM_CART':
+      //console.log("Reducer received action:", action); // Log the action
       const items = state.cart.filter(item => item.id !== action.payload);
       return {
         ...state,
@@ -45,17 +33,18 @@ const AppReducer = (state: State, action: Action): State => {
 };
 
 export const AppContext = createContext<{
-  cart: State['cart'];
-  menuData: State['menuData'];
-  dispatch: React.Dispatch<Action>;
+  cart: CartItem[];
+  menuData: MenuItem[];
+  dispatch: React.Dispatch<AppAction>;
 }>({
   cart: initialState.cart,
   menuData: initialState.menuData,
   dispatch: () => null
 });
 
-/* export const AppProvider = ({ children }: { children: ReactNode }) => {
+export const AppProvider = ({ children }: { children: ReactNode }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
+  //console.log("Provider state:", state); // Log the initial state
 
   return (
     <AppContext.Provider value={{
@@ -66,4 +55,4 @@ export const AppContext = createContext<{
       {children}
     </AppContext.Provider>
   );
-}; */
+};

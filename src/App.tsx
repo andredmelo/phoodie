@@ -2,17 +2,20 @@ import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import Navbar from './layouts/Navbar';
 import Home from './pages/Home/Home';
 import Menu from './pages/Menu/Menu';
-import Reservations from './pages/Reservations';
-import OrderOnline from './pages/OrderOnline';
-import Contacts from './pages/Contacts';
+import BookingPage from './pages/Booking/BookingPage';
+import OrderOnline from './pages/Order/OrderPage';
+//import Contacts from './pages/Contacts';
 import Footer from './layouts/Footer';
+import { AppProvider } from './context/AppContext';
 
 const Layout = () => {
   return (
     <>
       <Navbar />
       <main>
-        <Outlet /> {/* This is where child routes will be rendered */}
+        <AppProvider>
+          <Outlet /> {/* This is where child routes will be rendered */}
+        </AppProvider>
       </main>
       <Footer />
     </>
@@ -34,16 +37,16 @@ const router = createBrowserRouter([
       },
       {
         path: 'reservations',
-        element: <Reservations />,
+        element: <BookingPage />,
       },
       {
         path: 'order-online',
         element: <OrderOnline />,
       },
-      {
+      /* {
         path: 'contacts',
         element: <Contacts />,
-      },
+      }, */
     ],
   },
 ]);

@@ -15,8 +15,8 @@ export const sectionsList = [
     title: "Order Online",
     link: "/order-online"
   },
-  {
+  /* {
     title: "Contacts",
     link: "/contacts"
-  },
+  }, */
 ];

@@ -21,17 +21,20 @@ body:has(div.preventScroll){
   --text-color: #504746;
   --secondaryText-color: #867675;
   --navbar-height: 80px;
+  --border-radius: 6px;
 
   --color-white: #ffffff;
   --color-scarletChilly: #FF2F00;
+  --color-scarletChilly-50: rgba(255, 47, 0, 0.5);
   --color-turkeyRed: #B30000;
   --color-turkeyRed-90: rgba(179, 0, 0, 0.99);
   --color-orangeWeb: #FFAF00;
   --color-orangeWeb-90: rgba(255, 175, 0, 0.99);
-  --color-wenge: #504746;
   --color-parchment: #fefbee;
   --color-whiteSmoke: #F3F3F3;
   --color-platinum: #E5E7E6;
+  --color-wenge: #504746;
+  --color-jetBlack: #333333;
 }
 
 body {

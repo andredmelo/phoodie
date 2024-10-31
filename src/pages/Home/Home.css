@@ -61,13 +61,13 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: var( --color-green);
+  background-color: var( --color-turkeyRed);
   max-width:100%;
   min-width: 400px; */
   padding-top:2rem;
   padding-bottom:2rem;
   text-align: center;
-  color: var( --color-green)
+  color: var( --color-turkeyRed)
 }
 
 .confirmationSection{
@@ -75,17 +75,17 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: var( --color-green);
+    background-color: var( --color-turkeyRed);
     max-width:100%;
     min-width: 400px; */
     padding-top:2rem;
     padding-bottom:2rem;
     text-align: center;
-    color: var( --color-green)
+    color: var( --color-turkeyRed)
   }
   
 .orderOnlineSection{
-  background-color: var( --color-green);
+  background-color: var( --color-turkeyRed);
   justify-content: center;
   align-items: center;
   max-width:100%;
