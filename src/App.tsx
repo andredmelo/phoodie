@@ -7,17 +7,20 @@ import OrderOnline from './pages/Order/OrderPage';
 //import Contacts from './pages/Contacts';
 import Footer from './layouts/Footer';
 import { AppProvider } from './context/AppContext';
+import { NavProvider } from './context/NavContext';
 
 const Layout = () => {
   return (
     <>
-      <Navbar />
-      <main>
-        <AppProvider>
-          <Outlet /> {/* This is where child routes will be rendered */}
-        </AppProvider>
-      </main>
-      <Footer />
+      <NavProvider>
+        <Navbar />
+        <main>
+          <AppProvider>
+            <Outlet /> {/* This is where child routes will be rendered */}
+          </AppProvider>
+        </main>
+        <Footer />
+      </NavProvider>
     </>
   );
 };

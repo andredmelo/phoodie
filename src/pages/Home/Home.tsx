@@ -1,6 +1,7 @@
 //import React from 'react';
 import { Link } from "react-router-dom";
 import './Home.css';
+import { useNavContext } from '../../context/NavContext';
 
 import Hero from './Hero';
 import Specials from './Specials';
@@ -12,6 +13,7 @@ import { TestimonialsConstant } from '../../data/Home/TestimonialsConstant';
 import { AboutConstant } from '../../data/Home/AboutConstant';
 
 const Home = () => {
+  const { changeSection } = useNavContext();
 
   return (
     <main>
@@ -45,8 +47,12 @@ const Home = () => {
 
       <section id='menu' className='specialsTitle'>
         <h1>This Week Specials!</h1>
-        <Link to= './online-order'>
-        <button className='primayButton'>Online Menu</button>
+        <Link
+          to="/order-online"
+          aria-label="Order Online"
+          onClick={() => changeSection(3)}
+        >
+          <button className='primayButton'>Online Menu</button>
         </Link>
       </section>
 

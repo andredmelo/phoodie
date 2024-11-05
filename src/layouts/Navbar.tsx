@@ -1,25 +1,18 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useNavContext } from '../context/NavContext'; // Import the useNavContext hook
 import { cn } from "../lib/utils";
 import '../styles/hamburger.css';
 import { sectionsList } from '../data/SectionsList';
 
 const Navbar = () => {
-  const [navOpen, setNavOpen] = useState(false);
-  const [currentSection, setCurrentSection] = useState(0);
-
-  const changeSection = (index: number) => {
-    setCurrentSection(index);
-  };
-
-  let isCurrentSection = (index: number) => index === currentSection;
+  const { navOpen, setNavOpen, currentSection, changeSection } = useNavContext(); // Use the context
 
   return (
     <>
       <nav aria-label="Main Nav" className="navbar-shadow fixed top-0 left-0 w-full h-[var(--navbar-height)] bg-neutral-100/95 text-[var(--text-color)] font-semibold z-50">
         <div className="container mx-auto px-6 py-3 flex justify-between items-center">
 
-          {isCurrentSection(0) ? ( // Check is the section is home and render span or Link accordingly
+          {currentSection === 0 ? ( // Check is the section is home and render span or Link accordingly
             <span
               aria-label="Back to Homepage"
               className="flex flex-col items-center text-sm"
@@ -45,10 +38,10 @@ const Navbar = () => {
           <menu aria-label="Desktop Menu" className="links hidden lg:flex">
             {sectionsList.map((section, index) => (
               <li
-                className={`${isCurrentSection(index) ? 'translate-y-[-0.1rem]' : 'translate-y-0 hover:translate-y-[-0.15rem] transition-all duration-100 ease-out'}`}
                 key={index}
+                className={`${currentSection === index ? 'translate-y-[-0.1rem]' : 'translate-y-0 hover:translate-y-[-0.15rem] transition-all duration-100 ease-out'}`}
               >
-                {isCurrentSection(index) ? ( // Check is the section is current and render span or Link accordingly
+                {currentSection === index ? ( // Check is the section is current and render span or Link accordingly
                   <span
                     aria-label={section.title}
                     className={cn(
@@ -120,7 +113,7 @@ const Navbar = () => {
                     changeSection(index); // Update currentSection on click
                   }}
                   className={cn(
-                    `${isCurrentSection(index) ? 'text-red-700' : ''}`,
+                    `${currentSection === index ? 'text-red-700' : ''}`,
                     `${navOpen ? `opacity-100 transition-opacity duration-600 delay-${index * 100} ease-in` : 'opacity-0 transition-opacity duration-100 delay-0 ease-out'}`
                   )}
                 >

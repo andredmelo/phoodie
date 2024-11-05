@@ -1,6 +1,7 @@
 import React from 'react';
 import './Specials.css';
 import { Link } from "react-router-dom";
+import { useNavContext } from '../../context/NavContext';
 import IconMoto from '../../assets/images/moto_icon.svg';
 
 interface SpecialsProps {
@@ -11,6 +12,8 @@ interface SpecialsProps {
 }
 
 const Specials: React.FC<SpecialsProps> = ({ title, price, image, description }) => {
+  const { changeSection } = useNavContext();
+
   return (
     <>
       <section className='cardContainer'>
@@ -23,7 +26,13 @@ const Specials: React.FC<SpecialsProps> = ({ title, price, image, description })
           <p>{description}</p>
           <div className='orderDelivery'>
             <h6>
-            <Link to= './onlineorder'>Order a delivery</Link>
+            <Link
+              to="/order-online"
+              aria-label="Order Online"
+              onClick={() => changeSection(3)}
+            >
+                Order a delivery
+            </Link>
             </h6>
             <img src={IconMoto} alt='specials' width={20} />
           </div>
