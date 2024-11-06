@@ -8,6 +8,7 @@
   padding-top: 120px;
   padding-bottom: 3rem /* 48px */;
   background-color: var(--color-orangeWeb-90);
+  font-family: var(--family-p-a);
 }
 
  .order-content {
@@ -25,7 +26,7 @@
   border-radius: 8px;
   background:  var(--color-whiteSmoke);
   padding: 14px;
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--color-jetBlack);
   margin: 8px auto;
   width: 80%;
@@ -148,7 +149,12 @@ form p {
 .submitted {
   margin: 100px auto;
   text-align: center;
-  line-height: 4;
+}
+.submitted p {
+  font-family: var(--family-h1-h2-h3);
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.75;
 }
 
 
@@ -186,7 +192,7 @@ form p {
 .close {
   color: #aaa;
   float: right;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
 }
 

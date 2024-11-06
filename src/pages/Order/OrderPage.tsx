@@ -1,5 +1,6 @@
 import { useContext, useState, useEffect } from "react";
 import { AppContext } from '../../context/AppContext';
+import { useNavContext } from '../../context/NavContext';
 import './OrderPage.css';
 import OrderForm from "./OrderForm";
 import useSearch from "./useSearch";
@@ -8,6 +9,7 @@ import { addCartSvg, removeCartSvg } from "../../assets/images/svg";
 import { MenuItem } from '../../types/menu';
 
 export default function OnlineOrder(): JSX.Element {
+  const { changeSection } = useNavContext();
   const { cart, dispatch } = useContext(AppContext);
   const [search, setSearch] = useState<string>('');
   const { handleSearch } = useSearch({ search });
@@ -51,8 +53,16 @@ export default function OnlineOrder(): JSX.Element {
         {
           submitted ?
           <div className="submitted">
-            <p>Your order has been placed!</p>
-            <Link to="/" rel="href" aria-label="Go back to Home page">Go Back</Link>
+            <p>Your order has been placed.</p>
+            <p className="mb-10">Thank you!</p>
+            <Link
+              to="/"
+              rel="href"
+              aria-label="Go back to Home page"
+              onClick={() => changeSection(0)}
+            >
+              Go Back
+            </Link>
           </div>
           :
           <div className="order-content">
@@ -68,8 +78,8 @@ export default function OnlineOrder(): JSX.Element {
                   return (
                     <div className="order-item" key={item.id}>
                       <img
-                        src={new URL(`../../assets/images/${item.img}`, import.meta.url).href} 
-                        alt={item.dishUpper}
+                        src={new URL(`../../assets/images/menu/${item.img}`, import.meta.url).href} 
+                        alt={item.dishLower}
                       />
                       <p>{item.dishLower}</p>
                       <p>
@@ -116,36 +126,38 @@ export default function OnlineOrder(): JSX.Element {
                     {/* Modal for Disclaimer */}
                     {isModalOpen && (
                       <div className="modal">
-                        <div className="modal-content space-y-4">
+                        <div className="modal-content">
                           <span className="close" onClick={closeModal}>&times;</span>
-                          <h2 className="mt-0">Disclaimer for Online Orders</h2>
-                          <p>1. Order Accuracy:
-                            While we strive to ensure that all menu items and prices are accurately listed on our website, errors may occur. We reserve the right to correct any inaccuracies and update information as necessary. If an error is discovered after your order is placed, we will contact you to confirm the correct details.
-                          </p>
-                          <p>
-                            2. Availability:
-                            All menu items are subject to availability. We cannot guarantee that all items will be in stock at the time of your order. If a selected item is unavailable, we will notify you as soon as possible and offer alternatives if applicable.
-                          </p>
-                          <p>
-                            3. Allergens and Dietary Restrictions:
-                            Our menu items may contain allergens or ingredients that could affect individuals with dietary restrictions. Please inform us of any allergies or dietary concerns when placing your order. We will do our best to accommodate your needs, but we cannot guarantee that cross-contamination will not occur.
-                          </p>
-                          <p>
-                            4. Delivery Times:
-                            Estimated delivery times are provided at the time of your order but may vary based on factors such as traffic, weather conditions, and order volume. We appreciate your understanding and patience.
-                          </p>
-                          <p>
-                            5. Payment Processing:
-                            All payments are processed securely through our payment gateway. By placing an order, you agree to provide accurate payment information and authorize us to charge the total amount for your order.
-                          </p>
-                          <p>
-                            6. Refunds and Cancellations:
-                            Once an order is confirmed, cancellations may not be accepted, especially if the food has already been prepared or dispatched for delivery. Refunds will be considered on a case-by-case basis in accordance with our policy.
-                          </p>
-                          <p>
-                            7. Changes to Terms:
-                            We reserve the right to modify these terms at any time without prior notice. It is your responsibility to review the terms periodically for updates.
-                          </p>
+                          <h2 className="mt-2 mb-6">Disclaimer for Online Orders</h2>
+                          <div className="flex flex-col space-y-4">
+                            <p>1. Order Accuracy:
+                              While we strive to ensure that all menu items and prices are accurately listed on our website, errors may occur. We reserve the right to correct any inaccuracies and update information as necessary. If an error is discovered after your order is placed, we will contact you to confirm the correct details.
+                            </p>
+                            <p>
+                              2. Availability:
+                              All menu items are subject to availability. We cannot guarantee that all items will be in stock at the time of your order. If a selected item is unavailable, we will notify you as soon as possible and offer alternatives if applicable.
+                            </p>
+                            <p>
+                              3. Allergens and Dietary Restrictions:
+                              Our menu items may contain allergens or ingredients that could affect individuals with dietary restrictions. Please inform us of any allergies or dietary concerns when placing your order. We will do our best to accommodate your needs, but we cannot guarantee that cross-contamination will not occur.
+                            </p>
+                            <p>
+                              4. Delivery Times:
+                              Estimated delivery times are provided at the time of your order but may vary based on factors such as traffic, weather conditions, and order volume. We appreciate your understanding and patience.
+                            </p>
+                            <p>
+                              5. Payment Processing:
+                              All payments are processed securely through our payment gateway. By placing an order, you agree to provide accurate payment information and authorize us to charge the total amount for your order.
+                            </p>
+                            <p>
+                              6. Refunds and Cancellations:
+                              Once an order is confirmed, cancellations may not be accepted, especially if the food has already been prepared or dispatched for delivery. Refunds will be considered on a case-by-case basis in accordance with our policy.
+                            </p>
+                            <p>
+                              7. Changes to Terms:
+                              We reserve the right to modify these terms at any time without prior notice. It is your responsibility to review the terms periodically for updates.
+                            </p>
+                          </div>
                         </div>
                       </div>
                     )}

@@ -71,7 +71,7 @@
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-    background-color: var(--primary-color);
+    background-color: var(--color-scarletChilly);
 }
 
 /* Animation */

@@ -49,7 +49,8 @@ export default function BookingPage(): JSX.Element {
       </div>
 
       <div className="reserveMap mb-[-4rem] pb-32">
-        <h2 className="pt-16 pb-8 text-3xl font-semibold text-[var(--color-white)] drop-shadow-lg">Phởodie restaurant location</h2>
+        <h2 className="pt-16 pb-4 text-4xl font-semibold text-[var(--color-parchment)]">Phởodie restaurant location</h2>
+        <h3 className="pt-4 pb-8 text-xl font-medium text-[var(--color-white)]">6363 N Milwaukee Ave, Chicago, IL 60646</h3>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d5930.327458581551!2d-87.79216635432768!3d41.99676158491562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x880fc947ee7d6871%3A0x4ce4921ec14fdd9b!2s6363%20N%20Milwaukee%20Ave%2C%20Chicago%2C%20IL%2060646%2C%20USA!3m2!1d41.9967617!2d-87.7870165!5e0!3m2!1sen!2s!4v1697847037229!5m2!1sen!2s"
           title="Google Map"

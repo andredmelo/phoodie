@@ -22,12 +22,12 @@ const useSubmitForm = () => {
 
   useEffect(() => {
     if (bookingForm) {
-      localStorage.setItem('Little_Lemon-Table', JSON.stringify({
+      localStorage.setItem('Phoodie-Table', JSON.stringify({
         date,
         time,
         reservation: reserveNumber
       }));
-      navigate('/confirmation', { state: bookingForm });
+      navigate('/booking-confirmation', { state: bookingForm });
     }
   }, [bookingForm, navigate, date, time, reserveNumber]);
 

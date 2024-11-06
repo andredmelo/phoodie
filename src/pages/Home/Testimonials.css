@@ -2,7 +2,7 @@
     display: flex;
     width: 300px;
     height: 100%;
-    border-radius:8px;
+    border-radius: 0.3rem;
     gap:5rem;
     box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.1);
     background-color: var(--color-white);
@@ -25,12 +25,17 @@
   }
 
   .reviewsContainer  p{
-    padding: 1rem;
+    padding: 1.5rem;
   }
 
 
-h4{
-  font-family: 'Markazi Text', serif;
-  line-height: 1;
-  font-size: 1.25rem;
+h4 {
+  font-family: var(--family-h1-h2-h3);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+p {
+  font-family: var(--family-p-a);
+  font-size: 0.9rem;
+  font-weight: 400;
 }

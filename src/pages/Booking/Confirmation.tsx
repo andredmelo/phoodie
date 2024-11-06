@@ -1,8 +1,10 @@
 import { birthdaySvg, anniversarySvg, businessSvg, generalSvg } from "../../assets/images/svg";
 import { Link, useLocation } from "react-router-dom";
+import { useNavContext } from '../../context/NavContext';
 import { BookingFormData } from "../../types/menu";
 
-export default function Confirmation(): JSX.Element {
+export default function BookingConfirmation(): JSX.Element {
+  const { changeSection } = useNavContext();
   const { state } = useLocation();
   const { date, firstName, lastName, email, phone, time, occasion, guests, reserveNumber } = state as BookingFormData;
 
@@ -20,8 +22,9 @@ export default function Confirmation(): JSX.Element {
 
   return (
     <>
+      <div className="w-full spacer" />
       <div className="reserve">
-        <h2>Table reserved at the Little Lemon Chicago Restaurant!</h2>
+        <h2>Table reserved at the Phởodie Chicago Restaurant!</h2>
         <p>Here are the details of your reservation:</p>
         <div className="details">
           <ul>
@@ -45,7 +48,14 @@ export default function Confirmation(): JSX.Element {
         </div>
         <p>Order details has been sent to: <b><i>{email}</i></b></p>
         <br/>
-        <Link to="/reservations" rel="href" aria-label="Go back to Reservations page">Go Back</Link>
+        <Link
+          to="/"
+          rel="href"
+          aria-label="Go back to Home page"
+          onClick={() => changeSection(0)}
+        >
+          Go Back
+        </Link>
       </div>
     </>
   )

@@ -1,6 +1,6 @@
 import ShrimpPho from '../../assets/images/menu/Shrimp-Pho-1280w.webp';
 import ChickenPho from '../../assets/images/menu/Chicken-Pho-1280w.webp';
-import LemonDessert from '../../assets/images/menu/Shrimp-Pho-1280w.webp';
+import BeefPho from '../../assets/images/menu/Shrimp-Pho-1280w.webp';
 
 export const SpecialsConstant = [
   {
@@ -27,6 +27,6 @@ export const SpecialsConstant = [
     price: '$12.99',
     description:
       'Thin rice noodles soup featuring a fragrant broth, tasty beef, and fresh herbs.',
-    image: LemonDessert,
+    image: BeefPho,
   },
 ];

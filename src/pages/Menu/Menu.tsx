@@ -10,13 +10,13 @@ const Menu = (): JSX.Element => {
   return (
     <>
       <div className="w-full spacer" />
-      <div className='menuContainer flex align-center justify-center py-10'>
+      <div className='menuContainer flex align-center justify-center py-6 lg:py-10'>
         <div className='menuOutter'>
           <div className='menuInner'>
             <div className='menu'>
             <span className="flex flex-col items-center text-base p-8">
-              <img src="../../assets/images/Phoodie_logo.svg" alt="Phởodie logo" className="w-[75px]"></img>
-              Phởodie
+              <img src="../../assets/images/Phoodie_logo.svg" alt="Phởodie logo" className="w-[150px]"></img>
+              {/* Phởodie */}
             </span>
               <h2>Menu</h2>
               <div className='menu-content'>
@@ -25,14 +25,16 @@ const Menu = (): JSX.Element => {
                     return (
                       <div className='menu-content-item' key={item.id}>
                         <img
-                          src={new URL(`../../assets/images/${item.img}`, import.meta.url).href} 
-                          alt={item.dishUpper}
+                          src={new URL(`../../assets/images/menu/${item.img}`, import.meta.url).href} 
+                          alt={item.dishLower}
                         />
                         <div>
-                          <p>{item.dishUpper}</p>
+                          <div className='flex flex-row h-full items-center justify-between'>
+                            <h3>{item.dishLower}</h3>
+                            <span>${item.price}</span>
+                          </div>
                           <p>{item.description}</p>
                         </div>
-                        <span>${item.price}</span>
                       </div>
                     )
                   })

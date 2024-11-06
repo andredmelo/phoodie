@@ -14,7 +14,7 @@ const AboutConstant: React.FC<AboutConstantProps> = ({ title, subtitle, descript
     <section className='aboutContainer'>
       <div>
         <h1>{title}</h1>
-        <h6>{subtitle}</h6>
+        <h2>{subtitle}</h2>
         {description.map((text, index) => (
           <p key={index}>{text}</p>
         ))}

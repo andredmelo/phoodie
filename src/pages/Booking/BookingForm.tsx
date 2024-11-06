@@ -78,7 +78,7 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }: Bo
     })}>
       <h2>ONLINE RESERVATION</h2>
       <p>Choose date and time:</p>
-      <div className='date-time'>
+      <div className='date-time mb-6'>
         <input
           type="date"
           id="date"
@@ -101,7 +101,6 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }: Bo
           }
         </select>
       </div>
-      <small>*Max 10 guests per table</small>
       <select name="guests" value={guests} onChange={e => setGuests(e.target.value)} required>
         {/* <option value="12:00">2 guests</option> */}
         <option value="1">1 Person</option>
@@ -115,6 +114,7 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }: Bo
         <option value="9">9 Guests</option>
         <option value="10">10 Guests</option>
       </select>
+      <small className='mb-4'>*Max 10 guests per table</small>
       <div className="input-group">
         <input
           type='text'

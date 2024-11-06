@@ -12,17 +12,38 @@
   /* margin: 70px auto; */
 }
 
+.reserve h2 {
+  padding: 10px 20px;
+  font-family: var(--family-h1-h2-h3);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-jetBlack);
+}
+
 .reserve p {
   width: 300px;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
+  font-family: var(--family-p-a);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-wenge);
 }
 
+.reserve ul:first-child {
+  color: var(--color-turkeyRed);
+}
+.reserve ul:last-child {
+  color: var(--color-wenge);
+}
 
-.reserve h2 {
-  padding-left: 10px;
-  padding-right: 10px;
+.reserve ul li {
+  text-align: left;
+  padding: 0.5rem 0rem;
+  font-family: var(--family-p-a);
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .reserveMap {
@@ -54,6 +75,9 @@ form {
   width: 90%;
   max-width: 650px;
   border-radius: 0.5rem /* 8px */;
+  font-family: var(--family-p-a);
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 
 .reservationsForm {
@@ -77,13 +101,13 @@ form {
   margin: 20px auto;
 }
 
-.details ul:first-child {
+/* .details ul:first-child {
   color: var(--color-wenge);
 }
 
 .details ul:nth-child(2) {
   color: var(--color-jetBlack);
-}
+} */
 
 svg {
   vertical-align: middle;
@@ -178,9 +202,9 @@ input[type="date"] {
   padding-top: 7px;
 }
 
-.input-group small {
+form small {
   display: flex;
-  color: red;
+  color: var(--color-scarletChilly);
 }
 
 .input-group input {

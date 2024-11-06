@@ -3,6 +3,7 @@ import Navbar from './layouts/Navbar';
 import Home from './pages/Home/Home';
 import Menu from './pages/Menu/Menu';
 import BookingPage from './pages/Booking/BookingPage';
+import BookingConfirmation from './pages/Booking/Confirmation';
 import OrderOnline from './pages/Order/OrderPage';
 //import Contacts from './pages/Contacts';
 import Footer from './layouts/Footer';
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: 'reservations',
         element: <BookingPage />,
+      },
+      {
+        path: 'booking-confirmation',
+        element: <BookingConfirmation />,
       },
       {
         path: 'order-online',

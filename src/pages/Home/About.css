@@ -8,38 +8,35 @@
 }
 
 .aboutContainer h1{
-  font-size: 50px;
-  font-family: 'Sora', sans-serif;
+  font-family: var(--family-h1-h2-h3);
+  font-size: 4rem;
   font-weight: 700;
-  line-height:76.81px;
 }
 
-.aboutContainer h6{
-  font-size: 40px;
-  font-family: 'Sora', sans-serif;
+.aboutContainer h2{
+  font-family: var(--family-h1-h2-h3);
+  font-size: 2rem;
   font-weight: 300;
-  line-height: 48.01px;
-  padding-bottom: 15px;
 }
 
 .aboutContainer p {
   width: 370px;
-  padding-top: 5px;
+  font-family: var(--family-p-a);
+  font-size: 1.1rem;
+  font-weight: 300;
   /* text-align: justify; */
-  height: minmax(200, 322);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 23.38px;
+  /* height: minmax(200, 322); */
+  margin: 0.5rem 0px;
 }
 
 .aboutContainer img {
   border-radius: 12px;
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
 }
 .aboutContainer img.big {
   width: 100%;
-  max-width: 800px;
+  max-width: 850px;
 }
 
 
