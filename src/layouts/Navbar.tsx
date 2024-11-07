@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <>
       <nav aria-label="Main Nav" className="navbar-shadow fixed top-0 left-0 w-full h-[var(--navbar-height)] bg-neutral-100/[97] text-[var(--color-wenge)] font-semibold z-50">
-        <div className="container mx-auto h-full px-6 py-1 flex justify-between items-center">
+        <div className="lg:container mx-auto h-full px-6 py-1 flex justify-between items-center">
 
           {currentSection === 0 ? ( // Check is the section is home and render span or Link accordingly
             <span
@@ -21,17 +21,21 @@ const Navbar = () => {
               {phoodieSvg}
             </span>
           ) : (
-            <Link
-              to="/"
-              onClick={() => {
-                setNavOpen(false); // Set Mobile Nav state to false on click. By using 'false' it accounts for when the user clicks and the Mobile Menu is both open or closed.
-                changeSection(0); // Update currentSection on click
-              }}
-              aria-label="Back to Homepage"
-              className="flex flex-col items-center justify-start h-[48px] lg:h-[60px] text-[var(--color-turkeyRed)] translate-y-0 hover:translate-y-[-0.125rem]"
+            <span
+              className="flex flex-col items-center justify-start h-[48px] lg:h-[60px] w-[48px] lg:w-[60px] text-[var(--color-turkeyRed)]"
             >
-              {phoodieSvg}
-            </Link>
+              <Link
+                to="/"
+                onClick={() => {
+                  setNavOpen(false); // Set Mobile Nav state to false on click. By using 'false' it accounts for when the user clicks and the Mobile Menu is both open or closed.
+                  changeSection(0); // Update currentSection on click
+                }}
+                aria-label="Back to Homepage"
+                className="translate-y-0 hover:translate-y-[-0.125rem]"
+              >
+                {phoodieSvg}
+              </Link>
+            </span>
           )}
 
           <menu aria-label="Desktop Menu" className="links hidden lg:flex text-lg">
@@ -96,7 +100,7 @@ const Navbar = () => {
       >
         <div className="overflow-y-scroll w-screen h-full max-h-screen">
           <div className="spacer"></div>
-          <menu className="links space-y-7 px-6 pb-10 pt-6">
+          <menu className="links space-y-7 px-6 pb-10 pt-6 font-bold">
             {sectionsList.map((section, index) => (
               <li key={index}
                 className={cn(
