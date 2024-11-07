@@ -10,17 +10,6 @@
   src: url('fonts/Sora-variable-wght.ttf');
   font-weight: 100 900;
 }
-/* @font-face {
-  font-family: 'SourceSans';
-  src: url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200..900&display=swap');
-  font-weight: 100 900;
-} */
-/* @font-face {
-  font-family: 'NotoSans';
-  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200..900&display=swap');
-  font-weight: 100 900;
-} */
-
 
 body:has(div.preventScroll){
   overflow: hidden;
@@ -52,6 +41,11 @@ body:has(div.preventScroll){
   --color-gray: #808080;
   --color-wenge: #504746;
   --color-jetBlack: #333333;
+}
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 58px;
+  }
 }
 
 body {

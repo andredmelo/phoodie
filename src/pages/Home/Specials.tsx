@@ -16,9 +16,9 @@ const Specials: React.FC<SpecialsProps> = ({ title, price, image, description })
 
   return (
     <>
-      <section className='cardContainer'>
+      <section className='cardContainer flex max-w-full md:max-w-72 lg:max-w-80 h-auto rounded-lg items-center gap-8 md:gap-20 mx-8 md:mx-0'>
         <article>
-          <img src={image} alt='specials' width={280} height={200} />
+          <img src={image} alt='specials'/>
           <div className='title'>
             <h3>{title}</h3>
             <h4>{price}</h4>

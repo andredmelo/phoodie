@@ -121,7 +121,7 @@ export default function OnlineOrder(): JSX.Element {
                 <>
                   <div className="disclaimer flex flex-col items-center justify-center">
                     <button onClick={openModal} className="disclaimer-button">Order Online Disclaimer</button> {/* Button to open modal */}
-                    <p className="p-2 text-sm text-white">By placing an order through our website, you acknowledge that you have read, understood, and agreed to this disclaimer.</p>
+                    <p className="p-2 text-sm text-white text-center">By placing an order through our website, you acknowledge that you have read, understood, and agreed to this disclaimer.</p>
 
                     {/* Modal for Disclaimer */}
                     {isModalOpen && (
@@ -173,7 +173,7 @@ export default function OnlineOrder(): JSX.Element {
         data-divider-pos="bottom"
         data-divider-style="hill-side-soft"
       >
-        <svg id="hill-side-soft" className="fill-[var(--color-orangeWeb-90)] w-full h-[60px]" preserveAspectRatio="none" viewBox="0 0 1442 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+        <svg id="hill-side-soft" className="fill-[var(--color-orangeWeb-90)] w-full h-[30px] md:h-[45px] lg:h-[60px]" preserveAspectRatio="none" viewBox="0 0 1442 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
           <path className="divider-color" d="M1442,33.8142136 C1280.56278,15.0410066 1162.74657,5.65440317 1088.55136,5.65440317 C935.145886,5.65440317 572.295431,37.1029354 3.86535248e-12,100 L0,0 L1442,0 L1442,33.8142136 Z"></path>
         </svg>
       </div>

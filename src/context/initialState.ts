@@ -12,20 +12,20 @@ const initialState = {
   menuData: [
     {
       id: 1,
-      img: 'Shrimp-Pho-1280w.webp',
+      img: 'Beef-Pho-1280w.webp',
       price: '13.99',
-      dishUpper: 'Shrimp Pho',
-      dishLower: 'Shrimp Phở',
-      description: 'Thin rice noodles soup featuring jumbo shrimp, along with aromatic broth, fresh herbs and vegetables.',
+      dishUpper: 'Beef Phở',
+      dishLower: 'Beef Phở',
+      description: 'Thin rice noodles soup featuring a fragrant broth, tasty beef, and fresh herbs.',
       quantity: 0,
     },
     {
       id: 2,
-      img: 'Beef-Pho-1280w.webp',
+      img: 'Shrimp-Pho-1280w.webp',
       price: '12.99',
-      dishUpper: 'Beef Phở',
-      dishLower: 'Beef Phở',
-      description: 'Thin rice noodles soup featuring a fragrant broth, tasty beef, and fresh herbs.',
+      dishUpper: 'Shrimp Pho',
+      dishLower: 'Shrimp Phở',
+      description: 'Thin rice noodles soup featuring jumbo shrimp, along with aromatic broth, fresh herbs and vegetables.',
       quantity: 0,
     },
     {

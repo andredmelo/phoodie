@@ -10,7 +10,7 @@ const Menu = (): JSX.Element => {
   return (
     <>
       <div className="w-full spacer" />
-      <div className='menuContainer flex align-center justify-center py-6 lg:py-10'>
+      <div className='menuContainer flex align-center justify-center pt-6 lg:pt-10 pb-12 md:pb-16 px-3 lg:px-0'>
         <div className='menuOutter'>
           <div className='menuInner'>
             <div className='menu'>

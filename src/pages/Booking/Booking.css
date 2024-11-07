@@ -20,6 +20,12 @@
   color: var(--color-jetBlack);
 }
 
+@media (max-width: 720px) {
+  .reserve h2 {
+    font-size: 1.25rem;
+  }
+}
+
 .reserve p {
   width: 300px;
   text-align: center;
@@ -176,19 +182,40 @@ input[type="date"] {
   border-radius: 6px;
   background: none;
   padding: 14px;
-  font-size: 16px;
+  font-size: 0.9rem;
   color: var(--color-jetBlack);
   margin: 8px auto;
 }
 
-select {
+form select {
   /* width: 146px; */
   width: 100%;
+  min-height: 25px;
+  padding-right: 45px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('assets/images/arrow-chevron-down.svg');
+  background-repeat: no-repeat;
+  background-position: right center;
 }
 
 input[type="date"] {
-  min-width: 180px;
+  min-width: 140px;
   margin-right: 10px;
+}
+
+@media (max-width: 1280px) {
+  input[type="date"] {
+    min-width: 130px;
+    margin-right: 10px;
+  }
+  @media (max-width: 720px) {
+    input[type="date"] {
+      min-width: 120px;
+      margin-right: 10px;
+    }
+  }
 }
 
 ::placeholder {

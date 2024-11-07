@@ -2,7 +2,7 @@
 const Footer = () => (
   <>
     <div className="dslc-section-divider" data-divider-pos="top" data-divider-style="hill-side-round-off">
-      <svg id="hill-side-round-off" className="fill-[var(--color-turkeyRed-90)] h-[40px] w-full" preserveAspectRatio="none" viewBox="0 0 1442 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+      <svg id="hill-side-round-off" className="fill-[var(--color-turkeyRed-90)] h-[20px] md:h-[30px] lg:h-[40px] w-full" preserveAspectRatio="none" viewBox="0 0 1442 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
         <path className="divider-color" d="M 1442 99.585 L 1441.5 41.814 L 0 41.814 L 0 137 C 270.638 91.121 246.037 87.492 577.459 78.702 C 673.232 76.162 820.823 101.892 952.919 112.851 C 1288.894 140.723 1412.292 105.614 1442 99.585 Z" id="hill-side-round-off" transform="matrix(-1, 0, 0, -1, 1442.000033000004, 141.814025361331)"></path>
       </svg>
     </div>
@@ -13,7 +13,7 @@ const Footer = () => (
         <p>© 2024 Company Name. All rights reserved.</p>
       </div> */}
 
-      <section className='container flex flex-wrap flex-col lg:flex-row justify-evenly items-center lg:items-start gap-4 gap-y-4 px-2 pt-6 pb-12'>
+      <section className='container flex flex-wrap flex-col-reverse md:flex-row justify-between lg:justify-evenly items-center lg:items-start gap-4 gap-y-4 px-2 pt-6 pb-12'>
 
           <article className="flex flex-col items-center gap-2 p-5">
             {/* <svg src="../../assets/images/Phoodie_logo.svg" alt="Phởodie logo" className="w-[85px] fill-[var(--color-turkeyRed-90)]"></svg> */}
@@ -153,6 +153,7 @@ const Footer = () => (
               </a>
             </ul>
           </article>
+
         </section>
     </footer>
   </>

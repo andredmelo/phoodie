@@ -8,7 +8,8 @@
   padding-top: 120px;
   padding-bottom: 3rem /* 48px */;
   background-color: var(--color-orangeWeb-90);
-  font-family: var(--family-p-a);
+  font-family: var(--family-h1-h2-h3);
+  font-weight: 500;
 }
 
  .order-content {
@@ -62,6 +63,12 @@
   background-color: var(--color-whiteSmoke);
   box-shadow: 0 4px 10px 1px rgb(0 0 0 / 15%);
 }
+@media (max-width: 430px) {
+  .order-item {
+    width: 80%;
+    height: 100%;
+  }
+}
 
 .order-item button {
   padding: 6px 10px;
@@ -73,8 +80,11 @@
 
 .order-item p {
   display: flex;
+  padding-top: 12px;
   flex-direction: row;
   align-items: center;
+  font-family: var(--family-h1-h2-h3);
+  font-weight: 500;
 }
 
 .order-item span {
@@ -85,6 +95,12 @@
   height: 130px;
   width: 100%;
   border-radius: 0.25rem;
+}
+@media (max-width: 430px) {
+  .order-item img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .order-item img:hover {
@@ -108,6 +124,8 @@
 
 .cart-item p {
   display: flex;
+  font-family: var(--family-h1-h2-h3);
+  font-weight: 500;
 }
 
 .cart-item p span:first-child {
@@ -187,6 +205,14 @@ form p {
   width: 80%; /* Width of the modal */
   max-width: 700px; /* Max width of the modal */
   border-radius: var(--border-radius);
+}
+@media (max-width: 430px) {
+  .modal-content {
+    width: 95%;
+    padding: 1.5rem;
+    height: 90%;
+    overflow-y: scroll;
+  }
 }
 
 .close {

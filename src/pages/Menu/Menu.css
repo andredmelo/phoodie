@@ -37,6 +37,25 @@
     conic-gradient(from 90deg at 1px 1px,#0000 25%,#000 0)
     calc(2*var(--s)) calc(2*var(--s))/calc(100% - 4*var(--s)) calc(100% - 4*var(--s));
 }
+@media (orientation: portrait) {
+  .menuOutter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    padding: 25px;
+    background-color: var(--color-turkeyRed);
+    border-radius: 1px;
+    /* border: solid red; */
+  }
+  .menu {
+    --s: 2px; /* control the size */
+    background: 
+      /* linear-gradient(      var(--_g)) var(--_s) no-repeat,
+      linear-gradient(90deg,var(--_g)) var(--_s) no-repeat, */
+      calc(2*var(--s)) calc(2*var(--s))/calc(100% - 4*var(--s)) calc(100% - 4*var(--s));
+  }
+}
 
 .menu h2 {
   color: var(--color-wenge);
