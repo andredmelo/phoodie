@@ -27,15 +27,21 @@
   /* text-align: justify; */
   /* height: minmax(200, 322); */
   margin: 0.5rem 0px;
+  border: 2px red solid;
+}
+@media only screen and (max-width: 600px) {
+  .aboutContainer p {
+    font-size: 1rem;
+  }
 }
 
 .aboutContainer img {
   border-radius: 12px;
   width: 100%;
 }
-.aboutContainer img.big {
+/* .aboutContainer img.big {
   width: 100%;
-}
+} */
 
 
 /* @media only screen and (max-width: 600px) {

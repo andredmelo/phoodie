@@ -10,7 +10,7 @@ interface TestimonialsProps {
 
 const Testimonials: React.FC<TestimonialsProps> = ({ name, picture, review }) => {
   return (
-    <section  className='reviewsContainer flex w-72 h-full rounded-md gap-20'>
+    <section  className='reviewsContainer flex w-72 h-full rounded-md gap-20 bg-white/95 shadow-md'>
       <article>
         <div className='pictures'>
           <img className='avatar' src={picture} alt='review avatar picture' />

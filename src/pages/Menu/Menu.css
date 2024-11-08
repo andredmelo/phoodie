@@ -1,10 +1,16 @@
+/* .menuContainer {
+  background-image: url('assets/images/menu/Menu-Phoodie-2560w.webp');
+  background-size: cover;
+  background-position-y: center;
+} */
+
 .menuOutter {
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 900px;
   padding: 25px;
-  background-color: var(--color-turkeyRed);
+  background-color: var(--color-turkeyRed-75);
   border-radius: 1px;
   /* border: solid red; */
 }

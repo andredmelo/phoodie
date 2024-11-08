@@ -1,12 +1,10 @@
 .heroSection{
-  display: flex;
-  width: 100%;
-  justify-content:center;
-  align-items: center;
-  column-gap: 2rem;
-  background-color: var(--color-turkeyRed-90);
+  /* background-color: var(--color-turkeyRed-90); */
+  background-image: url('assets/images/hero-Phoodie.webp');
+  background-size: cover;
+  background-position-y: center;
   padding-top: calc(var(--navbar-height)*1.75);
-  padding-bottom: calc(var(--navbar-height)*1);
+  padding-bottom: calc(var(--navbar-height)*2);
 }
 /* @media (orientation: portrait) {
   .heroSection {
@@ -47,7 +45,7 @@
   font-weight: 500;
   flex-wrap: wrap;
   align-items: center;
-  background-color: var( --color-orangeWeb);
+  background-color: var( --color-turkeyRed);
   color: var( --color-parchment);
   padding-top:4rem;
 }
@@ -59,7 +57,7 @@
   gap:2rem;
   align-items: center;
   min-height: 400px;
-  background-color: var( --color-orangeWeb);
+  background-color: var( --color-turkeyRed);
   padding-bottom:4rem;
   padding-top:4rem;
 }
@@ -104,7 +102,7 @@
   color: var( --color-white);
 }
 
-.aboutSection{
+/* .aboutSection{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -112,7 +110,7 @@
   max-width:100%;
   padding-top:2rem;
   padding-bottom:2rem;
-}
+} */
 
 
 
@@ -135,6 +133,9 @@
 
 .dslc-section-divider[data-divider-pos="top"] {
   top: 1px;
+}
+.dslc-section-divider[data-divider-pos="bottom"] {
+  top: calc(-0.99 * var(--navbar-height) * var(--multiplier));
 }
 
 .dslc-section-divider.dslc-flip-hor svg {

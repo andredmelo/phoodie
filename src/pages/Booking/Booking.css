@@ -7,8 +7,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 80px;
-  margin-bottom: 20px;
+  /* padding-top: 80px;
+  padding-bottom: 80px; */
   /* margin: 70px auto; */
 }
 
@@ -52,13 +52,13 @@
   font-weight: 500;
 }
 
-.reserveMap {
+/* .reserveMap {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-orangeWeb-90);
-}
+  background-color: var(--color-whiteSmoke);
+} */
 /* .reserve-date input {
   cursor: pointer;
   border: 2px solid #d4c114;
@@ -103,7 +103,8 @@ form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 320px;
+  /* width: 100%; */
+  max-width: 450px;
   margin: 20px auto;
 }
 

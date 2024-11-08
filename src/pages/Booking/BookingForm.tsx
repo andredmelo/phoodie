@@ -63,7 +63,7 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }: Bo
 
   return (
     <form
-    className='reservationsForm'
+    className='reservationsForm p-8 md:p-12 bg-white/95 rounded-lg'
     onSubmit={e => submitForm(e, {formData: {
         firstName: firstName.val,
         lastName: lastName.val,
@@ -101,7 +101,7 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }: Bo
           }
         </select>
       </div>
-      <select name="guests" value={guests} onChange={e => setGuests(e.target.value)} required>
+      <select name="guests" value={guests} onChange={e => setGuests(e.target.value)} required className='mb-6'>
         {/* <option value="12:00">2 guests</option> */}
         <option value="1">1 Person</option>
         <option value="2">2 Guests</option>
@@ -114,7 +114,18 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }: Bo
         <option value="9">9 Guests</option>
         <option value="10">10 Guests</option>
       </select>
-      <small className='mb-4'>*Max 10 guests per table</small>
+      {/* <small className='mb-2'>*Max 10 guests per table</small> */}
+      <select
+        className='mb-10'
+        name="occasion"
+        value={occasion}
+        onChange={e => setOccasion(e.target.value)}>
+        <option label="Select an occasion (optional)" value="">Select an occasion (optional)</option>
+        <option label="Birthday" value="Birthday">Birthday</option>
+        <option label="Anniversary" value="Anniversary">Anniversary</option>
+        <option label="Business" value="Business">Business</option>
+        {/* <option label="Other" value="Other">Other</option> */}
+      </select>
       <div className="input-group">
         <input
           type='text'
@@ -171,18 +182,6 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }: Bo
           </>
         }
       </div>
-      <select
-        /* placeholder='Select an occasion' */
-        /* style={{width: '280px'}} */
-        name="occasion"
-        value={occasion}
-        onChange={e => setOccasion(e.target.value)}>
-        <option label="Select an occasion (optional)" value="">Select an occasion (optional)</option>
-        <option label="Birthday" value="Birthday">Birthday</option>
-        <option label="Anniversary" value="Anniversary">Anniversary</option>
-        <option label="Business" value="Business">Business</option>
-        {/* <option label="Other" value="Other">Other</option> */}
-      </select>
       <button aria-label="On Click confirm booking details" disabled={disableBtn} type="submit">Confirm booking</button>
     </form>
   )

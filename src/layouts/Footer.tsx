@@ -1,19 +1,21 @@
 
 const Footer = () => (
   <>
-    <div className="dslc-section-divider" data-divider-pos="top" data-divider-style="hill-side-round-off">
-      <svg id="hill-side-round-off" className="fill-[var(--color-turkeyRed-90)] h-[20px] md:h-[30px] lg:h-[40px] w-full" preserveAspectRatio="none" viewBox="0 0 1442 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-        <path className="divider-color" d="M 1442 99.585 L 1441.5 41.814 L 0 41.814 L 0 137 C 270.638 91.121 246.037 87.492 577.459 78.702 C 673.232 76.162 820.823 101.892 952.919 112.851 C 1288.894 140.723 1412.292 105.614 1442 99.585 Z" id="hill-side-round-off" transform="matrix(-1, 0, 0, -1, 1442.000033000004, 141.814025361331)"></path>
-      </svg>
-    </div>
 
-    <footer className="flex justify-center items-center bg-[var(--color-turkeyRed-90)]">
+    <footer className="bg-[var(--color-turkeyRed)]">
+      <section
+        className="dslc-section-divider"
+        data-divider-pos="bottom"
+        data-divider-style="hill-side-round-off"
+      >
+        <svg id="hill-side-round-off" className="fill-[var(--color-turkeyRed)] h-[calc(var(--navbar-height)*var(--multiplier))] w-full" preserveAspectRatio="none" viewBox="0 0 1442 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+          <path className="divider-color" d="M 1442 99.585 L 1441.5 41.814 L 0 41.814 L 0 137 C 270.638 91.121 246.037 87.492 577.459 78.702 C 673.232 76.162 820.823 101.892 952.919 112.851 C 1288.894 140.723 1412.292 105.614 1442 99.585 Z" id="hill-side-round-off" transform="matrix(-1, 0, 0, -1, 1442.000033000004, 141.814025361331)"></path>
+        </svg>
+      </section>
 
-      {/* <div className="flex justify-center items-center bg-transparent py-4">
-        <p>© 2024 Company Name. All rights reserved.</p>
-      </div> */}
+      <section className="flex justify-center items-center bg-[var(--color-turkeyRed)]">
 
-      <section className='container flex flex-wrap flex-col-reverse md:flex-row justify-between lg:justify-evenly items-center lg:items-start gap-4 gap-y-4 px-2 pt-6 pb-12'>
+        <div className='container flex flex-wrap flex-col md:flex-row justify-between lg:justify-evenly items-center lg:items-start gap-4 gap-y-2 mdgap-y-4 px-2 pb-16'>
 
           <article className="flex flex-col items-center gap-2 p-5">
             {/* <svg src="../../assets/images/Phoodie_logo.svg" alt="Phởodie logo" className="w-[85px] fill-[var(--color-turkeyRed-90)]"></svg> */}
@@ -100,32 +102,12 @@ const Footer = () => (
 
           <article>
             <h4 className="text-center lg:text-start">Social media</h4>
-            <ul className="flex flex-col gap-1">
+            <ul className="flex flex-row md:flex-col gap-8 md:gap-1">
 
               <a className="pb-[0.3rem] flex flex-row gap-1 items-center" href='https://www.instagram.com/'target="_blank" rel="noreferrer" >
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 64 64" fill="currentColor">
                   <path d="M 21.580078 7 C 13.541078 7 7 13.544938 7 21.585938 L 7 42.417969 C 7 50.457969 13.544938 57 21.585938 57 L 42.417969 57 C 50.457969 57 57 50.455062 57 42.414062 L 57 21.580078 C 57 13.541078 50.455062 7 42.414062 7 L 21.580078 7 z M 47 15 C 48.104 15 49 15.896 49 17 C 49 18.104 48.104 19 47 19 C 45.896 19 45 18.104 45 17 C 45 15.896 45.896 15 47 15 z M 32 19 C 39.17 19 45 24.83 45 32 C 45 39.17 39.169 45 32 45 C 24.83 45 19 39.169 19 32 C 19 24.831 24.83 19 32 19 z M 32 23 C 27.029 23 23 27.029 23 32 C 23 36.971 27.029 41 32 41 C 36.971 41 41 36.971 41 32 C 41 27.029 36.971 23 32 23 z"></path>
                 </svg>
-                {/* <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 48 48">
-                  <radialGradient id="yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1" cx="19.38" cy="42.035" r="44.899" gradientUnits="userSpaceOnUse">
-                    <stop offset="0" stopColor="#fd5"></stop>
-                    <stop offset=".328" stopColor="#ff543f"></stop>
-                    <stop offset=".348" stopColor="#fc5245"></stop>
-                    <stop offset=".504" stopColor="#e64771"></stop>
-                    <stop offset=".643" stopColor="#d53e91"></stop>
-                    <stop offset=".761" stopColor="#cc39a4"></stop>
-                    <stop offset=".841" stopColor="#c837ab"></stop>
-                  </radialGradient>
-                  <path fill="url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"></path>
-                  <radialGradient id="yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2" cx="11.786" cy="5.54" r="29.813" gradientTransform="matrix(1 0 0 .6663 0 1.849)" gradientUnits="userSpaceOnUse">
-                    <stop offset="0" stopColor="#4168c9"></stop>
-                    <stop offset=".999" stopColor="#4168c9" stopOpacity="0"></stop>
-                  </radialGradient>
-                  <path fill="url(#yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"></path>
-                  <path fill="#fff" d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"></path>
-                  <circle cx="31.5" cy="16.5" r="1.5" fill="#fff"></circle>
-                  <path fill="#fff" d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"></path>
-                </svg> */}
                 <li>Instagram</li>
               </a>
 
@@ -133,19 +115,9 @@ const Footer = () => (
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50" fill="currentColor">
                   <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
                 </svg>
-                {/* <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 48 48">
-                  <path fill="#0078d4" d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5	V37z"></path>
-                  <path d="M30,37V26.901c0-1.689-0.819-2.698-2.192-2.698c-0.815,0-1.414,0.459-1.779,1.364	c-0.017,0.064-0.041,0.325-0.031,1.114L26,37h-7V18h7v1.061C27.022,18.356,28.275,18,29.738,18c4.547,0,7.261,3.093,7.261,8.274	L37,37H30z M11,37V18h3.457C12.454,18,11,16.528,11,14.499C11,12.472,12.478,11,14.514,11c2.012,0,3.445,1.431,3.486,3.479	C18,16.523,16.521,18,14.485,18H18v19H11z" opacity=".05"></path>
-                  <path d="M30.5,36.5v-9.599c0-1.973-1.031-3.198-2.692-3.198c-1.295,0-1.935,0.912-2.243,1.677	c-0.082,0.199-0.071,0.989-0.067,1.326L25.5,36.5h-6v-18h6v1.638c0.795-0.823,2.075-1.638,4.238-1.638	c4.233,0,6.761,2.906,6.761,7.774L36.5,36.5H30.5z M11.5,36.5v-18h6v18H11.5z M14.457,17.5c-1.713,0-2.957-1.262-2.957-3.001	c0-1.738,1.268-2.999,3.014-2.999c1.724,0,2.951,1.229,2.986,2.989c0,1.749-1.268,3.011-3.015,3.011H14.457z" opacity=".07"></path>
-                  <path fill="#fff" d="M12,19h5v17h-5V19z M14.485,17h-0.028C12.965,17,12,15.888,12,14.499C12,13.08,12.995,12,14.514,12	c1.521,0,2.458,1.08,2.486,2.499C17,15.887,16.035,17,14.485,17z M36,36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698	c-1.501,0-2.313,1.012-2.707,1.99C24.957,25.543,25,26.511,25,27v9h-5V19h5v2.616C25.721,20.5,26.85,19,29.738,19	c3.578,0,6.261,2.25,6.261,7.274L36,36L36,36z"></path>
-                </svg> */}
                 <li>LinkedIn</li>
               </a>
               <a className="pb-[0.3rem] flex flex-row gap-1 items-center" href='https://www.facebook.com/' target="_blank" rel="noreferrer">
-                {/* <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 48 48">
-                  <path fill="#039be5" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"></path>
-                  <path fill="#fff" d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z"></path>
-                </svg> */}
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50" fill="currentColor">
                   <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"></path>
                 </svg>
@@ -154,7 +126,8 @@ const Footer = () => (
             </ul>
           </article>
 
-        </section>
+        </div>
+      </section>
     </footer>
   </>
 );

@@ -1,16 +1,39 @@
 import './Menu.css';
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { AppContext } from '../../context/AppContext';
-import { MenuItem } from '../../types/menu';
+import { MenuItem, MediaQueries } from '../../types/menu';
 
-const Menu = (): JSX.Element => {
+const Menu: React.FC<MediaQueries> = (props): JSX.Element => {
+  console.log(props.isUnder768);
 
   const { menuData } = useContext(AppContext);
+
+  const [backgroundImage, setBackgroundImage] = useState("url('assets/images/backgrounds/Menu-Phoodie-2560w.webp')");
+
+  useEffect(() => {
+    let backgroundImage = "url('assets/images/backgrounds/Menu-Phoodie-2560w.webp')";
+    if (props.isUnder768) {
+      //backgroundImage = "url('assets/images/backgrounds/Menu-Phoodie-768w.webp')";
+    } else if (props.isUnder1024) {
+      backgroundImage = "url('assets/images/backgrounds/Menu-Phoodie-1024w.webp')";
+    } else if (props.isUnder1280) {
+      backgroundImage = "url('assets/images/backgrounds/Menu-Phoodie-1280w.webp')";
+    } else if (props.isUnder1536) {
+      backgroundImage = "url('assets/images/backgrounds/Menu-Phoodie-1920w.webp')";
+    }
+    setBackgroundImage(backgroundImage);
+
+    console.log(backgroundImage);
+  
+  }, [props.isUnder768, props.isUnder1024, props.isUnder1280, props.isUnder1536]);
 
   return (
     <>
       <div className="w-full spacer" />
-      <div className='menuContainer flex align-center justify-center pt-6 lg:pt-10 pb-12 md:pb-16 px-3 lg:px-0'>
+      <div
+        className='menuContainer flex align-center justify-center pt-6 lg:pt-10 pb-16 md:pb-24 lg:pb-40 px-3 lg:px-0 bg-cover bg-center'
+        style={{ backgroundImage: backgroundImage }}
+      >
         <div className='menuOutter'>
           <div className='menuInner'>
             <div className='menu'>

@@ -2,23 +2,29 @@ import React from 'react';
 import './Hero.css';
 import { Link } from "react-router-dom";
 import { useNavContext } from '../../context/NavContext';
+import { phoodieWideSvg } from "../../assets/images/svg";
 //import { phoodieWideSvg } from "../../assets/images/svg";
+
+
 
 interface HeroProps {
   title: string;
   subtitle: string;
   description: string;
   buttonName: string;
-  pict: string;
+  image: string;
 }
 
-const Hero: React.FC<HeroProps> = ({ title, subtitle, description, buttonName, pict }) => {
+const Hero: React.FC<HeroProps> = ({ /* title, */ subtitle, description, buttonName, image }) => {
   const { changeSection } = useNavContext();
 
   return (
-    <section className='hero flex flex-col md:flex-row justify-center align-start py-5 px-4 md:px-10 lg:px-0 gap-8'>
-      <article className='flex flex-col align-center text-center md:text-left'>
-        <h1>{title}</h1>
+    <section className='hero flex flex-col md:flex-row w-full max-w-[90%] md:max-w-[90%] lg:max-w-[65rem] gap-10 mx-auto p-8 md:p-12 bg-white/90 rounded-lg'>
+      <article className='flex flex-col w-full min-w-[42%] lg:min-w-[35%] align-center text-center md:text-left items-center md:items-start'>
+        <span className="flex items-center justify-start h-24 lg:h-28 w-44 lg:w-fit text-[var(--color-turkeyRed)] mb-4">
+          {phoodieWideSvg}
+        </span>
+        {/* <h1>{title}</h1> */}
         {/* <span className="flex justify-start h-[50px] lg:h-[100px] text-[var(--color-white)]">
           {phoodieWideSvg}
         </span> */}
@@ -32,9 +38,9 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, description, buttonName, p
           <button className='primayButton'>{buttonName}</button>
         </Link>
       </article>
-      <div className='w-full h-auto'>
-        <img src={pict} alt='hero' className='rounded-xl object-scale-down'/>
-      </div>
+      <picture className='flex min-h-full overflow-hidden'>
+        <img src={image} alt='hero image by Leohoho' className='object-cover h-full rounded-xl'/>
+      </picture>
     </section>
   );
 };
