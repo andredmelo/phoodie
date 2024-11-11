@@ -171,14 +171,14 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }: Bo
           value={phone.val}
           onChange={e => setPhone({...email, val: e.target.value})}
           onBlur={handlePhoneBlur}
-          minLength={11} maxLength={11}
+          minLength={11} maxLength={13}
           required
         />
-        <label aria-label="phone" htmlFor="phone">Phone Number e.g +0123456789</label>
+        <label aria-label="phone" htmlFor="phone">Phone Number e.g +15551234567</label>
         {phone.error && 
           <>
             <small>Phone number should start with + or 0.</small>
-            <small>Min & Max 10 numbers.</small>
+            <small>Min 11 & Max 13 numbers.</small>
           </>
         }
       </div>
