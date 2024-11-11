@@ -1,16 +1,17 @@
 import { useContext, useState } from "react";
-import { validateEmail, validatePhone/* , validateAddress */ } from "../Booking/fieldsValidation";
+import { validateName, validateEmail, validatePhone, validateAddress } from "../Booking/fieldsValidation";
 import { AppContext } from "../../context/AppContext";
 //import { BookingFormData } from "../../types/menu";
 import './OrderPage.css';
 
 interface OrderFormProps {
   onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+  onFormData: (data: { name: string; address: string; email: string }) => void; // Include a callback for the form data
 }
 
-export default function OrderForm({ onSubmit }: OrderFormProps): JSX.Element {
+export default function OrderForm({ onSubmit, onFormData }: OrderFormProps): JSX.Element {
   const { cart } = useContext(AppContext);
-  const [address, setAddress] = useState<string>('');
+  const [address, setAddress] = useState<{ val: string; error: boolean }>({ val: '', error: false });
   const [name, setName] = useState<{ val: string; error: boolean }>({ val: '', error: false });
   const [email, setEmail] = useState<{ val: string; error: boolean }>({ val: '', error: false });
   const [phone, setPhone] = useState<{ val: string; error: boolean }>({ val: '', error: false });
@@ -32,26 +33,29 @@ export default function OrderForm({ onSubmit }: OrderFormProps): JSX.Element {
   }
 
   function handleNameBlur(): void {
-    const textRegex = /^[a-zA-Z]{3,15}$/;
-    if (textRegex.test(name.val)) {
+    /* const textRegex = /^(?:[a-zA-ZÀ-ÿ]{3,15})(?: [a-zA-ZÀ-ÿ]{3,24})?$/; */
+    /* const textRegex = /^[a-zA-ZÀ-ÿ]{3,15}$/; */ // This version includes both standard Latin letters and their accented variants
+    /* if (textRegex.test(name.val)) { */
+    if (validateName(name.val)) {
       setName({ ...name, error: false });
     } else {
       setName({ ...name, error: true });
     }
   }
 
-  /* function handleAddressBlur() {
+  function handleAddressBlur() {
     if (validateAddress(address.val)) {
       setAddress({...address, error: false})
     } else {
       setAddress({...address, error: true})
     }
-  }; */
+  };
 
   return (
-    <div className="order-details mx-auto mt-4 mb-12">
+    <div className="order-details mx-auto mb-8 md:mb-24 lg:mb-32">
       <form onSubmit={e => { 
         e.preventDefault(); // Prevent default form submission
+        onFormData({ address: address.val, name: name.val, email: email.val }); // Call onFormData with the current values when submitting
         onSubmit(e); // Call the passed onSubmit function
       }}>
         <p>Order details</p>
@@ -59,14 +63,14 @@ export default function OrderForm({ onSubmit }: OrderFormProps): JSX.Element {
           <input
             type='text'
             name="name"
-            maxLength={15}
+            maxLength={40}
             value={name.val}
             onChange={e => setName({ ...name, val: e.target.value })}
             onBlur={handleNameBlur}
             required
           />
           <label aria-label="name" htmlFor="name">Name</label>
-          {name.error && <small>Please enter a valid name.</small>}
+          {name.error && <small>Please enter a valid name. (First and last names only)</small>}
         </div>
         <div className="input-group">
           <input
@@ -75,13 +79,13 @@ export default function OrderForm({ onSubmit }: OrderFormProps): JSX.Element {
             value={phone.val}
             onChange={e => setPhone({ ...phone, val: e.target.value })}
             onBlur={handlePhoneBlur}
-            minLength={11} maxLength={11}
+            minLength={11} maxLength={13}
             required />
-          <label aria-label="phone" htmlFor="phone">Phone Number e.g +0123456789</label>
+          <label aria-label="phone" htmlFor="phone">Phone Number e.g +15551234567</label>
           {phone.error && 
             <>
               <small>Phone number should start with + or 0.</small>
-              <small>Min & Max 10 numbers.</small>
+              <small>Min 11 & Max 13 numbers.</small>
             </>
           }
         </div>
@@ -100,8 +104,10 @@ export default function OrderForm({ onSubmit }: OrderFormProps): JSX.Element {
         <div className="input-group">
           <input
             name="address"
-            value={address}
-            onChange={e => setAddress(e.target.value)}
+            value={address.val}
+            /* onChange={e => setAddress(e.target.value)} */
+            onChange={e => setAddress({ ...address, val: e.target.value })}
+            onBlur={handleAddressBlur}
             required />
           <label aria-label="address" htmlFor="address">Delivery Address</label>
         </div>

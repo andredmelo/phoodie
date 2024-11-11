@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from "react";
+import { Link, useLocation } from 'react-router-dom';
 import { useNavContext } from '../context/NavContext'; // Import the useNavContext hook
 import { cn } from "../lib/utils";
 import '../styles/hamburger.css';
@@ -6,7 +7,17 @@ import { sectionsList } from '../data/SectionsList';
 import { phoodieSvg } from "../assets/images/svg";
 
 const Navbar = () => {
+  const location = useLocation(); // Get current location
   const { navOpen, setNavOpen, currentSection, changeSection } = useNavContext(); // Use the context
+
+  // Set initial section based on current path when component mounts
+  useEffect(() => {
+    const currentPath = location.pathname;
+    const sectionIndex = sectionsList.findIndex(section => section.link === currentPath);
+    if (sectionIndex !== -1) {
+      changeSection(sectionIndex);
+    }
+  }, [location.pathname]); // Re-run when path changes
 
   return (
     <>
@@ -38,7 +49,7 @@ const Navbar = () => {
             </span>
           )}
 
-          <menu aria-label="Desktop Menu" className="links hidden lg:flex text-lg">
+          <menu aria-label="Desktop Menu" className="links hidden md:flex text-md lg:text-lg">
             {sectionsList.map((section, index) => (
               <li
                 key={index}
@@ -48,7 +59,7 @@ const Navbar = () => {
                   <span
                     aria-label={section.title}
                     className={cn(
-                      `whitespace-nowrap px-10 py-7`,
+                      `whitespace-nowrap px-6 lg:px-10 py-7`,
                       `text-[var(--color-turkeyRed)] hover:text-[var(--color-turkeyRed)] hover:no-underline cursor-default`
                     )}
                   >
@@ -60,7 +71,7 @@ const Navbar = () => {
                     onClick={() => changeSection(index)} // Update currentSection on click
                     aria-label={section.title}
                     className={cn(
-                      `whitespace-nowrap px-10 py-7 text-[var(--color-gray)]`,
+                      `whitespace-nowrap px-6 lg:px-10 py-7 text-[var(--color-gray)]`,
                       `hover:text-[var(--color-turkeyRed)] transition-all duration-100 ease-out`, //hover:underline
                       //`${isCurrentSection(index) ? 'text-[var(--color-turkeyRed)] hover:text-[var(--color-turkeyRed)] hover:no-underline cursor-default' : ''}`
                     )}
@@ -74,7 +85,7 @@ const Navbar = () => {
 
           <div
             aria-label="Mobile Nav"
-            className="flex lg:hidden items-center"
+            className="flex md:hidden items-center"
             onClick={() => setNavOpen(!navOpen)}
           >
             <div className={cn(
@@ -93,14 +104,14 @@ const Navbar = () => {
       <div
         aria-label="Mobile Menu"
         className={cn(
-          `fixed lg:hidden top-0 right-0 left-0 bg-gradient-to-b from-neutral-100/95 via-neutral-100/95 to-neutral-100/90`,
-          `text-[var(--color-wenge)] font-medium z-40`,
+          `fixed md:hidden top-0 right-0 left-0 bg-gradient-to-b from-neutral-100/95 via-neutral-100/95 to-neutral-100/90`,
+          `text-[var(--color-wenge)] z-40`,
           `${navOpen ? 'block bottom-0 preventScroll transition-all duration-300 ease-out' : 'none bottom-[100%] transition-all duration-150 ease-in'}`
         )}
       >
         <div className="overflow-y-scroll w-screen h-full max-h-screen">
           <div className="spacer"></div>
-          <menu className="links space-y-7 px-6 pb-10 pt-6 font-bold">
+          <menu className="links space-y-8 px-6 pb-10 pt-6 text-xl font-semibold">
             {sectionsList.map((section, index) => (
               <li key={index}
                 className={cn(

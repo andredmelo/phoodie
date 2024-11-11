@@ -46,8 +46,8 @@ const BookingConfirmation: React.FC<MediaQueries> = (props): JSX.Element => {
         style={{ backgroundImage: backgroundImage }}
       >
         <div className="w-full spacer" />
-        <div className='reservationsForm flex flex-col items-center justify-center max-w-[95%] my-8 md:my-0 p-8 md:p-12 bg-white/[0.98] rounded-lg'>
-          <h2>Table reserved at the Phởodie Chicago Restaurant!</h2>
+        <div className='reservationsForm flex flex-col items-center justify-center max-w-[95%] md:max-w-[55%] lg:max-w-[600px] my-8 md:my-0 p-8 md:p-12 bg-white/[0.98] rounded-lg'>
+          <h2 className="px-2 text-center">Table reserved at the Phởodie Chicago Restaurant!</h2>
           <p>Here are the details of your reservation:</p>
           <div className="details gap-4">
             <ul>

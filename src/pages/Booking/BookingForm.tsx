@@ -76,7 +76,7 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }: Bo
         reserveNumber: Math.floor(Math.random() * 1000),
       }
     })}>
-      <h2>ONLINE RESERVATION</h2>
+      <h2 className="py-6 text-4xl text-[var(--color-turkeyRed)] font-medium text-center">Online Reservation</h2>
       <p>Choose date and time:</p>
       <div className='date-time mb-6'>
         <input

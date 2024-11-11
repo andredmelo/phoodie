@@ -15,7 +15,7 @@ const App = () => {
 
   /* ===== Media Queries ===== */
   const noHover = useMediaQuery('(hover: none)')
-  const portrait = useMediaQuery('(orientation: portrait)')
+  const isPortrait = useMediaQuery('(orientation: portrait)')
   const isUnder768 = useMediaQuery('(max-width: 767px)')
   const isUnder1024 = useMediaQuery('(max-width: 1024px)')
   const isUnder1280 = useMediaQuery('(max-width: 1280px)')
@@ -50,7 +50,7 @@ const App = () => {
           path: 'menu',
           element: <Menu
             noHover={noHover}
-            portrait={portrait}
+            isPortrait={isPortrait}
             isUnder768={isUnder768}
             isUnder1024={isUnder1024}
             isUnder1280={isUnder1280}
@@ -61,7 +61,7 @@ const App = () => {
           path: 'reservations',
           element: <BookingPage
             noHover={noHover}
-            portrait={portrait}
+            isPortrait={isPortrait}
             isUnder768={isUnder768}
             isUnder1024={isUnder1024}
             isUnder1280={isUnder1280}
@@ -72,7 +72,7 @@ const App = () => {
           path: 'booking-confirmation',
           element: <BookingConfirmation
             noHover={noHover}
-            portrait={portrait}
+            isPortrait={isPortrait}
             isUnder768={isUnder768}
             isUnder1024={isUnder1024}
             isUnder1280={isUnder1280}
@@ -81,7 +81,14 @@ const App = () => {
         },
         {
           path: 'order-online',
-          element: <OrderOnline />,
+          element: <OrderOnline
+            noHover={noHover}
+            isPortrait={isPortrait}
+            isUnder768={isUnder768}
+            isUnder1024={isUnder1024}
+            isUnder1280={isUnder1280}
+            isUnder1536={isUnder1536}
+          />,
         },
         /* {
           path: 'contacts',

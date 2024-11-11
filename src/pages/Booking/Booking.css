@@ -13,17 +13,7 @@
 }
 
 .reserve h2 {
-  padding: 10px 20px;
   font-family: var(--family-h1-h2-h3);
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--color-jetBlack);
-}
-
-@media (max-width: 720px) {
-  .reserve h2 {
-    font-size: 1.25rem;
-  }
 }
 
 .reserve p {
@@ -86,6 +76,14 @@ form {
   font-weight: 400;
 }
 
+@media (max-width: 1280px) {
+  @media (max-width: 720px) {
+    form {
+      width: 100%;
+    }
+  }
+}
+
 .reservationsForm {
   border: 1px solid var(--color-scarletChilly-50);
   box-shadow: 0 20px 30px 0px rgb(0 0 0 / 0.1), 0 0px 30px 0px rgb(0 0 0 / 0.05);
@@ -143,12 +141,12 @@ button {
   padding: 0.7rem 1rem;
   cursor: pointer;
   font-family: var(--family-p-a);
-  color: var(--color-jetBlack);
+  color: var(--color-whiteSmoke);
   font-weight: 600;
   font-size: 1rem;
-  background-color: var(--color-orangeWeb);
+  background-color: var(--color-turkeyRed);
   border-radius: var(--border-radius);
-  border: 1px solid var(--color-platinum);
+  border: 2px solid var(--color-turkeyRed);
   width: max-content;
 }
 
@@ -158,9 +156,9 @@ button {
 
 button:hover:not([disabled]),
 a[rel="href"]:hover {
-  background-color: black;
+  background-color: var(--color-whiteSmoke);
   /* border: 1px solid var(--color-platinum); */
-  color: var(--color-orangeWeb);
+  color: var(--color-turkeyRed);
   transition: 0.2s ease-in-out;
 }
 
@@ -170,7 +168,10 @@ a[rel="href"]:active {
 }
 
 button:disabled {
-  background-color: rgb(224, 224, 224);
+  background-color: var(--color-whiteSmoke);
+  border: 1px solid var(--color-silver);
+  color: var(--color-silver);
+  transition: 0.2s ease-in-out;
 }
 
 

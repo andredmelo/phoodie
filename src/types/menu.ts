@@ -1,6 +1,6 @@
 export interface MediaQueries {
   noHover: boolean;
-  portrait: boolean;
+  isPortrait: boolean;
   isUnder768: boolean;
   isUnder1024: boolean;
   isUnder1280: boolean;

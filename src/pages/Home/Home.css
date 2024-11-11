@@ -1,6 +1,6 @@
 .heroSection{
   /* background-color: var(--color-turkeyRed-90); */
-  background-image: url('assets/images/hero-Phoodie.webp');
+  background-image: url('assets/images/backgrounds/hero-Phoodie.webp');
   background-size: cover;
   background-position-y: center;
   padding-top: calc(var(--navbar-height)*1.75);
@@ -135,7 +135,7 @@
   top: 1px;
 }
 .dslc-section-divider[data-divider-pos="bottom"] {
-  top: calc(-0.99 * var(--navbar-height) * var(--multiplier));
+  top: calc(-0.98 * var(--navbar-height) * var(--multiplier));
 }
 
 .dslc-section-divider.dslc-flip-hor svg {

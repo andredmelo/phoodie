@@ -16,7 +16,7 @@ const Home = () => {
   const { changeSection } = useNavContext();
 
   return (
-    <main>
+    <>
       {/* <div className="spacer"></div> */}
 
       <section id='home' className='heroSection w-full flex justify-center items-center gap-x-8'>
@@ -43,14 +43,14 @@ const Home = () => {
 				</svg>
       </div>
 
-      <section id='menu' className='specialsTitle gap-0 md:gap-10'>
+      <section id='menu' className='flex flex-col md:flex-row specialsTitle gap-6 md:gap-10'>
         <h1>This Week Specials!</h1>
         <Link
           to="/order-online"
           aria-label="Order Online"
           onClick={() => changeSection(3)}
         >
-          <button className='primayButton'>Online Menu</button>
+          <button className='primayButton'>Order Online</button>
         </Link>
       </section>
 
@@ -99,22 +99,28 @@ const Home = () => {
 				</svg>
       </div>
 
-      <section id='about' className='aboutSection w-full flex justify-center items-center py-8'>
+      <section id='about' className='aboutSection w-full flex justify-center items-center py-16 md:py-24'>
         {AboutConstant.map((about) => (
-          <article key={about.id}>
-            <About
-              title={about.title}
-              subtitle={about.subtitle}
-              description1={about.description1}
-              description2={about.description2}
-              image1={about.image1}
-              image2={about.image2}
-            />
-          </article>
+          <About
+            key={about.id}
+            title={about.title}
+            subtitle1={about.subtitle1}
+            description1={about.description1}
+            image1={about.image1}
+            subtitle2={about.subtitle2}
+            description2={about.description2}
+            image2A={about.image2A}
+            image2B={about.image2B}
+            subtitle3={about.subtitle3}
+            description3={about.description3}
+            image3={about.image3}
+            subtitle4={about.subtitle4}
+            description4={about.description4}
+          />
         ))}
       </section>
 
-    </main>
+    </>
   );
 };
 

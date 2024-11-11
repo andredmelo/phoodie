@@ -29,17 +29,17 @@ const BookingPage: React.FC<MediaQueries> = (props): JSX.Element => {
     window.scrollTo(0, 0);
   }, []);
 
-  const [backgroundImage, setBackgroundImage] = useState("url('assets/images/backgrounds/Menu-Phoodie-2560w.webp')");
+  const [backgroundImage, setBackgroundImage] = useState("url('assets/images/backgrounds/Reservations-Phoodie-2560w.webp')");
   useEffect(() => {
-    let backgroundImage = "url('assets/images/backgrounds/Menu-Phoodie-2560w.webp')";
+    let backgroundImage = "url('assets/images/backgrounds/Reservations-Phoodie-2560w.webp')";
     if (props.isUnder768) {
-      //backgroundImage = "url('assets/images/backgrounds/Menu-Phoodie-768w.webp')";
+      //backgroundImage = "url('assets/images/backgrounds/Reservations-Phoodie-768w.webp')";
     } else if (props.isUnder1024) {
-      backgroundImage = "url('assets/images/backgrounds/Menu-Phoodie-1024w.webp')";
+      backgroundImage = "url('assets/images/backgrounds/Reservations-Phoodie-1024w.webp')";
     } else if (props.isUnder1280) {
-      backgroundImage = "url('assets/images/backgrounds/Menu-Phoodie-1280w.webp')";
+      backgroundImage = "url('assets/images/backgrounds/Reservations-Phoodie-1280w.webp')";
     } else if (props.isUnder1536) {
-      backgroundImage = "url('assets/images/backgrounds/Menu-Phoodie-1920w.webp')";
+      backgroundImage = "url('assets/images/backgrounds/Reservations-Phoodie-1920w.webp')";
     }
     setBackgroundImage(backgroundImage);
 
@@ -48,7 +48,7 @@ const BookingPage: React.FC<MediaQueries> = (props): JSX.Element => {
   return (
     <>
       <div
-        className="reserve pt-6 md:pt-16 pb-24 md:pb-32"
+        className="reserve pt-6 md:pt-16 pb-24 md:pb-32 bg-center bg-cover"
         style={{ backgroundImage: backgroundImage }}
       >
         <div className="w-full spacer" />
@@ -61,7 +61,11 @@ const BookingPage: React.FC<MediaQueries> = (props): JSX.Element => {
         />
       </div>
 
-      <div className="dslc-section-divider dslc-flip-hor dslc-flip-ver" data-divider-pos="bottom" data-divider-style="hill-side-soft-off">
+      <div
+        className="dslc-section-divider dslc-flip-hor dslc-flip-ver"
+        data-divider-pos="bottom"
+        data-divider-style="hill-side-soft-off"
+      >
 				<svg id="hill-side-soft-off" className="fill-[var(--color-whiteSmoke)] w-full h-[calc(var(--navbar-height)*var(--multiplier))]" preserveAspectRatio="none" viewBox="0 0 1442 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
 					<path className="divider-color" d="M1442,30.5019121 L1442,100.654403 L0,100.654403 C572.295431,33.9877365 935.145886,0.654403168 1088.55136,0.654403168 C1162.74657,0.654403168 1280.56278,10.6035728 1442,30.5019121 Z" id="hill-side-soft-off" transform="translate(721.000000, 50.654403) scale(1, -1) translate(-721.000000, -50.654403) "></path>
 				</svg>

@@ -6,16 +6,16 @@
 }
 
 .hero h2{
-  font-size: 2.75rem;
+  font-size: 2rem;
   font-family: var(--family-h1-h2-h3);
-  font-weight: 300;
+  font-weight: 350;
   color: var( --color-wenge);
 }
 
 .hero p{
   font-family: var(--family-p-a);
-  font-size: 1.125rem;
-  font-weight: 300;
+  font-size: 1.1rem;
+  font-weight: 375;
   line-height: 23.38px;
   padding: 1rem 0px;
   color: var( --color-wenge);
