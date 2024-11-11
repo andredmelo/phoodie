@@ -44,7 +44,14 @@ const App = () => {
       children: [
         {
           index: true, // This will render Home at the root path
-          element: <Home />,
+          element: <Home
+            noHover={noHover}
+            isPortrait={isPortrait}
+            isUnder768={isUnder768}
+            isUnder1024={isUnder1024}
+            isUnder1280={isUnder1280}
+            isUnder1536={isUnder1536}
+          />,
         },
         {
           path: 'menu',
