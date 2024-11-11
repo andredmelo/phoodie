@@ -1,6 +1,6 @@
-import ShrimpPho from '../../assets/images/menu/Shrimp-Pho-1280w.webp';
-import ChickenPho from '../../assets/images/menu/Chicken-Pho-1280w.webp';
-import BeefPho from '../../assets/images/menu/Beef-Pho-1280w.webp';
+import ShrimpPho from '../../assets/images/menu/Shrimp-Pho-640w.webp';
+import ChickenPho from '../../assets/images/menu/Chicken-Pho-640w.webp';
+import BeefPho from '../../assets/images/menu/Beef-Pho-640w.webp';
 
 export const SpecialsConstant = [
 

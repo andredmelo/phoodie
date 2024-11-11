@@ -1,7 +1,7 @@
-import aboutPicture1 from '../../assets/images/home/about/Home-About-1-1920w.webp';
-import aboutPicture2A from '../../assets/images/home/about/Home-About-2A-1024w.webp';
-import aboutPicture2B from '../../assets/images/home/about/Home-About-2B-1024w.webp';
-import aboutPicture3 from '../../assets/images/home/about/Home-About-3-1920w.webp';
+import aboutPicture1 from '../../assets/images/home/about/Home-About-1-768w.webp';
+import aboutPicture2A from '../../assets/images/home/about/Home-About-2A-480w.webp';
+import aboutPicture2B from '../../assets/images/home/about/Home-About-2B-480w.webp';
+import aboutPicture3 from '../../assets/images/home/about/Home-About-3-768w.webp';
 
 export const AboutConstant = [
   {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { submitAPI } from "./BookingAPI";
-import { BookingFormData } from "../../types/menu";
+import { BookingFormData } from "../../types/sharedTypes";
 
 interface SubmitFormProps {
   formData: BookingFormData;

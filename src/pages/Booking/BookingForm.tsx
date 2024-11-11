@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { validateEmail, validatePhone } from "./fieldsValidation";
-import { BookingState, BookingAction } from "../../types/menu";
+import { BookingState, BookingAction } from "../../types/sharedTypes";
 
 interface BookingFormProps {
   dispatch: React.Dispatch<BookingAction>;

@@ -1,6 +1,6 @@
 import { createContext, useReducer, ReactNode } from "react";
 import initialState from "./initialState"; // Ensure this is a default export
-import { AppState, AppAction, MenuItem, CartItem } from "../types/menu";
+import { AppState, AppAction, MenuItem, CartItem } from "../types/sharedTypes";
 
 const AppReducer = (state: AppState, action: AppAction): AppState => {
   switch (action.type) {

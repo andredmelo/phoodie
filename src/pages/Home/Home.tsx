@@ -1,7 +1,8 @@
-//import React from 'react';
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import './Home.css';
 import { useNavContext } from '../../context/NavContext';
+import { MediaQueries } from "../../types/mediaQueries";
 
 import Hero from './Hero';
 import Specials from './Specials';
@@ -12,14 +13,34 @@ import { SpecialsConstant } from '../../data/Home/SpecialsConstant';
 import { TestimonialsConstant } from '../../data/Home/TestimonialsConstant';
 import { AboutConstant } from '../../data/Home/AboutConstant';
 
-const Home = () => {
+const Home: React.FC<MediaQueries> = (props): JSX.Element => {
   const { changeSection } = useNavContext();
+
+  const [backgroundImage, setBackgroundImage] = useState("url('assets/images/backgrounds/Home-Hero-Phoodie-2560w.webp')");
+  useEffect(() => {
+    let backgroundImage = "url('assets/images/backgrounds/Home-Hero-Phoodie-2560w.webp')";
+    if (props.isUnder768) {
+      //backgroundImage = "url('assets/images/backgrounds/Reservations-Phoodie-768w.webp')";
+    } else if (props.isUnder1024) {
+      backgroundImage = "url('assets/images/backgrounds/Home-Hero-Phoodie-10240w.webp')";
+    } else if (props.isUnder1280) {
+      backgroundImage = "url('assets/images/backgrounds/Home-Hero-Phoodie-1280w.webp')";
+    } else if (props.isUnder1536) {
+      backgroundImage = "url('assets/images/backgrounds/Home-Hero-Phoodie-1920w.webp')";
+    }
+    setBackgroundImage(backgroundImage);
+
+  }, [props.isUnder768, props.isUnder1024, props.isUnder1280, props.isUnder1536]);
 
   return (
     <>
       {/* <div className="spacer"></div> */}
 
-      <section id='home' className='heroSection w-full flex justify-center items-center gap-x-8'>
+      <section
+        id='hero'
+        className='heroSection w-full flex justify-center items-center gap-x-8'
+        style={{ backgroundImage: backgroundImage }}
+      >
         {HeroConstant.map((hero) => (
           <article key={hero.id}>
             <Hero

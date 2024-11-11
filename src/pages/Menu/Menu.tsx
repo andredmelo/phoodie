@@ -1,7 +1,8 @@
 import './Menu.css';
 import { useContext, useState, useEffect } from "react";
 import { AppContext } from '../../context/AppContext';
-import { MenuItem, MediaQueries } from '../../types/menu';
+import { MediaQueries } from "../../types/mediaQueries";
+import { MenuItem } from '../../types/sharedTypes';
 
 const Menu: React.FC<MediaQueries> = (props): JSX.Element => {
   console.log(props.isUnder768);

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
-import { MenuItem } from '../../types/menu';
+import { MenuItem } from '../../types/sharedTypes';
 
 interface SearchProps {
   search: string;

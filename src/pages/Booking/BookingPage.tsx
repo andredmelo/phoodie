@@ -1,11 +1,11 @@
-import { useReducer, useState } from "react";
+import { useReducer, useState, useEffect } from "react";
 import BookingForm from "./BookingForm";
 import { fetchAPI } from "./BookingAPI";
 /* import '../../assets/shared.css'; */
 import './Booking.css';
 import useSubmitForm from "./useSubmitForm";
-import { useEffect } from "react";
-import { MediaQueries, BookingAction } from "../../types/menu";
+import { MediaQueries } from "../../types/mediaQueries";
+import { BookingAction } from "../../types/sharedTypes";
 
 function initializeTimes(): string[] {
   let today = new Date();

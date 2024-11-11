@@ -6,7 +6,8 @@ import OrderForm from "./OrderForm";
 import useSearch from "./useSearch";
 import { Link } from "react-router-dom";
 import { addCartSvg, removeCartSvg } from "../../assets/images/svg";
-import { MediaQueries, MenuItem } from '../../types/menu';
+import { MediaQueries } from "../../types/mediaQueries";
+import { MenuItem } from '../../types/sharedTypes';
 
 const OnlineOrder: React.FC<MediaQueries> = (props): JSX.Element => {
   const { changeSection } = useNavContext();
@@ -99,7 +100,7 @@ const OnlineOrder: React.FC<MediaQueries> = (props): JSX.Element => {
   return (
     <>
       <section
-        className="order pt-10 md:pt-16 pb-24 md:pb-32 bg-center bg-cover"
+        className="order min-h-[calc(100lvh-(var(--navbar-height)*3))] pt-10 md:pt-16 pb-24 md:pb-32 bg-center bg-cover"
         style={{ backgroundImage: backgroundImage }}
       >
         <div className="w-full spacer" />

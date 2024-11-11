@@ -259,14 +259,14 @@ form small {
 .input-group input:focus {
   outline: none;
   color: var(--color-jetBlack);
-  border: 1px solid var(--color-orangeWeb);
+  border: 1px solid var(--color-scarletChilly);
 }
 
 /* If input focused */
 .input-group input:focus ~ label {
   transform: translateY(-50%);
   background-color: white;
-  border: 1px solid var(--color-orangeWeb);
+  border: 1px solid var(--color-scarletChilly);
   border-radius: 6px;
   padding: 1px 8px;
   color: var(--color-jetBlack);

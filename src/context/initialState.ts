@@ -12,7 +12,7 @@ const initialState = {
   menuData: [
     {
       id: 1,
-      img: 'Beef-Pho-1280w.webp',
+      img: 'Beef-Pho-640w.webp',
       price: '13.99',
       dishUpper: 'Beef Phở',
       dishLower: 'Beef Phở',
@@ -21,7 +21,7 @@ const initialState = {
     },
     {
       id: 2,
-      img: 'Shrimp-Pho-1280w.webp',
+      img: 'Shrimp-Pho-640w.webp',
       price: '12.99',
       dishUpper: 'Shrimp Pho',
       dishLower: 'Shrimp Phở',
@@ -30,7 +30,7 @@ const initialState = {
     },
     {
       id: 3,
-      img: 'Chicken-Pho-1280w.webp',
+      img: 'Chicken-Pho-640w.webp',
       price: '11.99',
       dishUpper: 'Chicken Phở',
       dishLower: 'Chicken Phở',
@@ -39,7 +39,7 @@ const initialState = {
     },
     {
       id: 4,
-      img: 'Banh-Xeo-1280w.webp',
+      img: 'Banh-Xeo-640w.webp',
       price: '9.99',
       dishUpper: 'Banh Xeo',
       dishLower: 'Bánh Xèo',
@@ -48,7 +48,7 @@ const initialState = {
     },
     {
       id: 5,
-      img: 'Cha-Ca-La-Vong-1280w.webp',
+      img: 'Cha-Ca-La-Vong-640w.webp',
       price: '9.99',
       dishUpper: 'Cha Ca La Vong',
       dishLower: 'Cha Ca La Vong',
@@ -57,7 +57,7 @@ const initialState = {
     },
     {
       id: 6,
-      img: 'Banh-Mi-1280w.webp',
+      img: 'Banh-Mi-640w.webp',
       price: '6.99',
       dishUpper: 'Banh Mi',
       dishLower: 'Bánh Mi',
@@ -66,7 +66,7 @@ const initialState = {
     },
     {
       id: 7,
-      img: 'Banh-Bo-Nuong-1200w.webp',
+      img: 'Banh-Bo-Nuong-640w.webp',
       price: '3.99',
       dishUpper: 'Bánh Bo Nuong',
       dishLower: 'Bánh Bo Nuong',
@@ -75,7 +75,7 @@ const initialState = {
     },
     {
       id: 8,
-      img: 'Banh-Tieu-1200w.webp',
+      img: 'Banh-Tieu-640w.webp',
       price: '3.99',
       dishUpper: 'Banh Tieu',
       dishLower: 'Bánh Tiêu',

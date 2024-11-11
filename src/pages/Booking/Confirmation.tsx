@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { birthdaySvg, anniversarySvg, businessSvg, generalSvg } from "../../assets/images/svg";
 import { Link, useLocation } from "react-router-dom";
 import { useNavContext } from '../../context/NavContext';
-import { MediaQueries, BookingFormData } from "../../types/menu";
+import { MediaQueries } from "../../types/mediaQueries";
+import { BookingFormData } from "../../types/sharedTypes";
 
 const BookingConfirmation: React.FC<MediaQueries> = (props): JSX.Element => {
   const [backgroundImage, setBackgroundImage] = useState("url('assets/images/backgrounds/Menu-Phoodie-2560w.webp')");
