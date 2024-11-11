@@ -24,6 +24,7 @@ const fetchAPI = function(date: any) {
 };
 
 const submitAPI = function(formData: any) {
+  void formData; // This line simulates a call without side effects
   return true;
 };
 
