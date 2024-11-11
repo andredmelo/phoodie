@@ -68,7 +68,7 @@ const initialState = {
       id: 7,
       img: 'Banh-Bo-Nuong-640w.webp',
       price: '3.99',
-      dishUpper: 'Bánh Bo Nuong',
+      dishUpper: 'Banh Bo Nuong',
       dishLower: 'Bánh Bo Nuong',
       description: 'Made from a rice flour batter enhanced with tapioca starch, pandan and rich coconut cream.',
       quantity: 0,
