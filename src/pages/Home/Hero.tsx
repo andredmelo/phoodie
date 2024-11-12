@@ -19,15 +19,11 @@ const Hero: React.FC<HeroProps> = ({ /* title, */ subtitle, description, buttonN
   const { changeSection } = useNavContext();
 
   return (
-    <section className='hero flex flex-col md:flex-row w-full max-w-[90%] md:max-w-[90%] lg:max-w-[65rem] gap-10 mx-auto p-8 md:p-12 bg-white/90 rounded-lg'>
+    <section className='hero flex flex-col md:flex-row min-h-[445px] w-full max-w-[90%] md:max-w-[90%] lg:max-w-[65rem] gap-10 mx-auto p-8 md:p-12 bg-white/90 rounded-lg'>
       <article className='flex flex-col w-full min-w-[42%] lg:min-w-[35%] align-center text-center md:text-left items-center md:items-start'>
         <span className="flex items-center justify-start h-24 lg:h-28 w-44 lg:w-fit text-[var(--color-turkeyRed)] mb-4">
           {phoodieWideSvg}
         </span>
-        {/* <h1>{title}</h1> */}
-        {/* <span className="flex justify-start h-[50px] lg:h-[100px] text-[var(--color-white)]">
-          {phoodieWideSvg}
-        </span> */}
         <h2> {subtitle}</h2>
         <p>{description}</p>
         <Link

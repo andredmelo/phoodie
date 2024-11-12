@@ -1,50 +1,33 @@
-# React + TypeScript + Vite
+<img src="public/assets/images/Phoodie_logo_v3_turkeyRed.svg" width="50%" syt height="50%" />
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# [phoodie-chicago](https://phoodie-chicago.netlify.app/)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[![CC BY-NC-ND 4.0][cc-by-nc-nd-shield]][cc-by-nc-nd]
 
-## Expanding the ESLint configuration
+This work is licensed under a
+[Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License][cc-by-nc-nd].
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+[![CC BY-NC-ND 4.0][cc-by-nc-nd-image]][cc-by-nc-nd]
 
-- Configure the top-level `parserOptions` property like this:
+[cc-by-nc-nd]: http://creativecommons.org/licenses/by-nc-nd/4.0/
+[cc-by-nc-nd-image]: https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png
+[cc-by-nc-nd-shield]: https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+#
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+This repository features the base code for the development of the website for Phởodie, a fictional Vietnamese restaurant, focused on traditional recipes served with a foodie mindset.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Featuring a clean layout with vibrant pictures showcasing Phởodie's delicious food, a table reservation and online order services.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+In the table reservation page JSON data of the available booking times is fetched from the API. After filling out the (client-side validated) form, the data is then submitted to the API to process the booking.
+
+#
+
+<h3>Tech Stack:</h3>
+
+* **React.js**
+* **Tailwind**
+
+#
+#### Development by [andreDmelo](https://andredmelo.dev/)
